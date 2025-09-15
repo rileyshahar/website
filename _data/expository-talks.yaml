@@ -1,0 +1,117 @@
+- title: The sequence 1, 11, 21, 1211, ... (its name is a spoiler!)
+  date: 2025-09-05
+  venue: Penn Pizza Seminar
+  venue_url: https://pizza-seminar.github.io
+  abstract: >
+    This talk is about a very playful sequence, originally studied by John
+    Conway, whose first terms are displayed in the title. We'll define the
+    sequence, prove some of its basic properties, and then discuss Conway's
+    "cosmological theorem," which determines the limiting behavior of the
+    sequence. A surprising role is played by a particular endomorphism of the
+    free monoid on 92 generators.
+
+- title: A connectivity toolbox
+  date: 2025-04-04
+  venue: AMTRaK IV
+  venue_url: https://web.sas.upenn.edu/callem/amtrak/
+  abstract: >
+    This talk will elaborate on the connectivity arguments that were swept under
+    the rug during pre-talk 1. In particular, we will focus on tools and
+    techniques coming from discrete Morse theory. After introducing the basics
+    of discrete Morse theory, we will use it to prove the Solomon-Tits Theorem.
+
+- title: The logical interpretation of topology
+  date: 2025-02-07
+  venue: Penn Graduate Geometry-Topology Seminar
+  abstract: >
+    Our standard intuition for abstract topology is geometric: the notion of
+    open set axiomatized the properties of open balls in metric spaces. Maybe
+    surprisingly, there is an equally applicable, and in some sense formally
+    dual, logical interpretation of topological spaces. In this interpretation,
+    open sets behave like "propositions subject to finite proof." This
+    talk---which assumes no knowledge of mathematical logic---will explore this
+    perspective, in particular as it relates to point-free topology and
+    sheaves.
+
+- title: Artin gluing in logic
+  date: 2025-02-10
+  venue: Penn Graduate Logic Seminar
+  abstract: >
+    A standard approach to proving meta-theoretic properties of a proof system
+    or type theory is to first define a stronger dependent predicate R---often
+    called a logical relation---by induction on syntax, and prove the desired
+    property by showing that every well-formed term satisfies this stronger
+    property. In categorical semantics, this technique looks like an Artin
+    gluing of the syntactic category along a hom-functor. This talk will
+    introduce this technique, at least in the special case of so-called
+    "sconing," and utilize it for a categorical proof of the existence property
+    of intuitionistic logic.
+
+- title: Girard's paradox for set theorists, via Hurkens
+  date: 2024-11-22}
+  venue: Penn Graduate Logic Seminar
+  abstract: >
+    Girard's paradox is an analogue of Russell's paradox which demonstrates the
+    inconsistency of a sufficiently rich type theory with a "type of all types."
+    In this talk, I will present a simplified version of the paradox due to
+    Hurkens (1995), which in particular has a nice analogue in naive set theory.
+    After treating this classical intuition and the type-theoretic argument, if
+    we have time we will implement the paradox in Lean.
+
+- title: Towards linear topoi
+  date: 2024-09-27
+  venue: Penn Graduate Logic Seminar
+  abstract: >
+    Topos theory plays a central role in geometry and categorical logic. For
+    instance, topoi yield a natural semantic theory of intuitionistic dependent
+    type theories. One important step in this theory is the observation that
+    topoi are Heyting categories, i.e. that propositions in the internal logic
+    of a topos can be refined along intuitionistic predicates. In this talk, I
+    will attempt to give an accessible outline of this classical story and
+    motivate the study of "linear topoi", categories which exhibit topos-like
+    behavior with respect to a linear internal logic. I will conclude with a
+    discussion of some progress towards an axiomatic presentation of these
+    categories.
+
+- title: Classifying spaces of categories
+  date: 2025-03-18
+  venue: Penn Kan Seminar on Algebraic K-Theory
+  venue_url: https://www2.math.upenn.edu/~mmerling/math619_25.html
+  abstract: >
+    We motivate and define the classifying space of a category and discuss
+    Quillen's Theorems A and B, which give powerful tools for computing
+    homotopical information about a functor.
+
+- title: Deloopings of categories
+  date: 2025-04-15
+  venue: Penn Kan Seminar on Algebraic K-Theory
+  venue_url: https://www2.math.upenn.edu/~mmerling/math619_25.html
+  abstract: >
+    We give a high-level intuition for why spaces with highly-coherent
+    homotopy-commutative and associative multiplications should model infinite
+    loop spaces. We discuss two machines for identifying such space spaces\: May's
+    operads and Segal's gamma spaces. We conclude with a discussion of
+    categories of operators and the May-Thomason uniqueness theorem for infinite
+    loop space machines.
+
+- title: The K-theory of Lawvere theories
+  date: 2025-04-24
+  venue: Penn Kan Seminar on Algebraic K-Theory
+  venue_url: https://www2.math.upenn.edu/~mmerling/math619_25.html
+  abstract: >
+    We introduce Lawvere theories and then discuss Bohmann-Szymik's work on
+    their K-theory. From the K-theoretic perspective, Lawvere theories are a
+    convenient generalization of rings in which Quillen's +=Q theorem still
+    holds, enabling a more computationally tractable K-theory than more general
+    settings.
+
+- title: Categorical semantics, via vibes
+  date: 2025-01-24
+  venue: Penn Pizza Seminar
+  venue_url: https://pizza-seminar.github.io
+  abstract: >
+    You might have heard of "categorical semantics" or "internal logics," or of
+    the relationship between topoi and intuitionistic logic, perhaps in Jin and
+    Carmine's pizza seminar talks from last semester. You also might not have!
+    Regardless, this talk aims to explain the big picture of what these terms
+    mean, how they relate, and why non-logicians might care.

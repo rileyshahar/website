@@ -1,0 +1,11 @@
+{%- assign n = include.list | size -%}
+{%- if n == 1 -%}
+	{{ include.list[0] }}
+{%- elsif n == 2 -%}
+	{{ include.list[0] }} and {{ include.list[1] }}
+{%- else -%}
+	{%- assign penult = n | minus: 1 -%}
+	{%- for a in include.list limit: penult -%}
+		{%- if forloop.index0 > 0 %}, {% endif -%}{{ a }}
+	{%- endfor -%}, and {{ include.list | last }}
+{%- endif -%}

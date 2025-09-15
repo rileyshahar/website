@@ -1,0 +1,24 @@
+- title: Enumerating submonoids of finite commutative monoids
+  date: 2025-08-28
+  arxiv: 2508.20786
+  status: submitted
+  coauthors:
+  - Caoilainn Kirkpatrick
+  - Amelie el Mahmoud
+  - Kyle Ormsby
+  - Angélica M. Osorno
+  - Dale Schandelmeier-Lynch
+  - Lixing Yi
+  - Avery Young
+  - Saron Zhu
+  abstract: >
+    Given a finite commutative monoid $$M$$, we show that submonoids of
+    $$M\times [n]$$ --- where $$[n] = \{0,1,\ldots,n\}$$ is equipped with the
+    max operation $$\vee$$ --- may be enumerated via the transfer matrix method.
+    When $$M$$ is also idempotent, we show that there are finitely many integers
+    $$\lambda$$ and rational numbers $$b_\lambda$$ (only depending on $$M$$)
+    such that the number of submonoids of $$M\times [n]$$ is $$\sum_\lambda
+    b_\lambda\lambda^n$$. This answers a question of Knuth regarding ternary
+    (and higher order) max-closed relations, and has applications to the
+    enumeration of saturated transfer systems in equivariant infinite loop space
+    theory.

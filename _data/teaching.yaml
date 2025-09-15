@@ -1,0 +1,148 @@
+- title: Mathematics of Change, Part I
+  code: MATH 1070
+  inst: University of Pennsylvania
+  term: Fall
+  year: 2025
+
+- title: Extra Stretchy Rubber-Sheet Geometry
+  inst: Mathcamp
+  year: 2025
+  week: 1
+  files: extra-stretchy-rubber-sheet-geometry
+  description: >
+    An informal introduction to the fundamental group, without relying on any
+    underlying point-set topology.
+
+- title: Category Theory from Scratch
+  inst: Mathcamp
+  coteachers:
+  - Della Hendrickson
+  year: 2025
+  week: 2
+  files: category-theory-from-scratch
+  description: >
+    An inquiry-based introduction to category theory. At the start of the class,
+    students made a list of various families of mathematical constructions they
+    thought could be generalized---like the cartesian product of sets and the
+    direct product of groups---then searched for categorical properties
+    encapsulating these families.
+
+- title: "Oops All Algebra: An Introduction to Infinity-Categories"
+  inst: Mathcamp
+  year: 2025
+  week: 3
+  files: oops-all-algebra
+  description: >
+    An introduction to the theory of infinity-categories in the model of
+    quasicategories. We discussed the need for such a theory, the difficulties
+    with handling coherence, defined simplicial sets, studied the nerve of a
+    category to motivate the definition of a quasicategory, and sketched the
+    proof that infinity-groupoids are Kan complexes.
+
+- title: A Tour of Paradox
+  inst: Mathcamp
+  year: 2025
+  week: 4
+  description: >
+    A survey of various paradoxes from philosophical and mathematical history.
+    Each day started with a ~10 minute lecture discussing the paradox, and then
+    students discussed the paradox and talked about how various mathematial
+    ideas might help us think about it differently. Paradoxes discussed included
+    Zeno's paradoxes of motion, the Sorites paradox and other paradoxes of
+    ambiguity, paradoxes of the material conditional, and paradoxes of
+    self-reference like the liar's and Russell's paradoxes.
+
+- title: A Cute Combinatorics Problem
+  inst: Mathcamp
+  year: 2025
+  week: 5
+  files: cute-combinatorics-problem
+  description: >
+    An introduction to the combinatorics of saturated transfer systems and
+    submonoids.
+
+
+- title: Computer Science Fundamentals I
+  code: CSCI 121
+  inst: Reed College
+  term: Spring
+  year: 2024
+- title: Computer Science Fundamentals I
+  code: CSCI 121
+  inst: Reed College
+  term: Fall
+  year: 2023
+- title: Computer Science Fundamentals I
+  code: CSCI 121
+  inst: Reed College
+  term: Spring
+  year: 2023
+- title: Computer Science Fundamentals I
+  code: CSCI 121
+  inst: Reed College
+  term: Fall
+  year: 2022
+- title: Computer Science Fundamentals I
+  code: CSCI 121
+  inst: Reed College
+  term: Spring
+  year: 2022
+- title: Computer Science Fundamentals I
+  code: CSCI 121
+  inst: Reed College
+  term: Fall
+  year: 2021
+
+- title: Calculus
+  code: Math 111
+  inst: Reed College
+  term: Spring
+  year: 2024
+
+- title: Computability and Complexity
+  code: CSCI 387
+  inst: Reed College
+  term: Spring
+  year: 2024
+
+- title: Computability and Complexity
+  code: CSCI 387
+  inst: Reed College
+  term: Fall
+  year: 2022
+
+- title: Linear Algebra
+  code: Math 201
+  inst: Reed College
+  term: Fall
+  year: 2023
+
+- title: Programming Language Design and Implementation
+  code: CSCI 384
+  inst: Reed College
+  term: Fall
+  year: 2023
+
+- title: Abstract Algebra
+  code: Math 332
+  inst: Reed College
+  term: Spring
+  year: 2023
+
+- title: Operating Systems
+  code: CSCI 393
+  inst: Reed College
+  term: Spring
+  year: 2023
+
+- title: Intermediate Computer Science Fundamentals I
+  code: CSCI 122
+  inst: Reed College
+  term: Fall
+  year: 2022
+
+- title: Computer Science Fundmanetals II
+  code: CSCI 221
+  inst: Reed College
+  term: Spring
+  year: 2022

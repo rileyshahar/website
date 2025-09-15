@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+
+		<title>
+			{%- if page.title_override -%}
+				{{ page.title_override }}
+			{%- else -%}
+				{{ page.title }} | {{ site.title }}
+			{%- endif -%}
+		</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lato:wght@300&display=swap"
+    />
+  </head>
+
+  <body>
+
+		<header>
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-end">
+					<div><h1 class="mb-0"> Riley Shahar </h1></div>
+					<ul class="list-inline mb-0">
+						{% for item in site.data.navbar %}
+							<li class="list-inline-item{% if item.url == page.url %} active{% endif %}">
+								<a {% if item.url != page.url %}href="{{ item.url }}"{% endif %}>
+									{{ item.title }}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			<hr>
+			</div>
+		</header>
+
+		<div class="container">
+			<h2> {{ page.title }} </h2>
+			{{ content }}
+		</div>
+
+		<footer>
+    	<div class="row">
+  			<div class="col-md-12 text-center">
+						Built with <a href="https://jekyllrb.com/"
+							target="_blank">Jekyll</a> and (server-side) <a
+							href="https://katex.org/" target="_blank">KaTeX</a> &middot;
+  				{% unless site.repo == null %}
+  					<a href="{{site.repo}}" target="_blank">Last updated {{ site.time | date:"%b %-d, %Y" }}</a>
+  				{%endunless%}
+  			</div>
+  		</div>
+		</footer>
+  </body>
+</html>
