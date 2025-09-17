@@ -20,7 +20,7 @@ my [undergraduate thesis](assets/undergrad-thesis.pdf){:target="_blank"} with
 [Angélica Osorno](https://people.reed.edu/~aosorno/){:target="_blank"} and [Adam
 Groce](https://people.reed.edu/~agroce/){:target="_blank"} on categorical models
 of cryptography. I was featured on [What Is a
-Reedie](https://www.reed.edu/reed-magazine/articles/2024/what-is-a-reedie/riley-shahar.html),
+Reedie](https://www.reed.edu/reed-magazine/articles/2024/what-is-a-reedie/riley-shahar.html){:target="_blank"},
 where I talked about my thesis and my broader experience at Reed. I was an
 organizer of both the math and CS student groups, and I co-organized the CS peer
 mentorship program and the math student colloquium.
