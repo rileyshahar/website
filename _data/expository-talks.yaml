@@ -1,3 +1,16 @@
+- title: A survey of directed topology
+  date: 2025-09-30
+  venue: Penn Graduate Geometry-Topology Seminar
+  abstract: >
+    Sometimes spaces seem to come with a natural sense of direction---consider a
+    manifold equipped with a vector field, or a spacetime manifold, or a
+    configuration space in concurrency theory, or just the ordinary interval.
+    Directed topological spaces are models for this kind of geometry. The
+    primary goal of this talk is to introduce the two most popular
+    models---d-spaces and streams---and discuss the sense in which they are
+    equivalent. We will then introduce the core ideas of directed homotopy
+    theory.
+
 - title: The sequence 1, 11, 21, 1211, ... (its name is a spoiler!)
   date: 2025-09-05
   venue: Penn Pizza Seminar
