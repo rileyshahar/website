@@ -30,6 +30,3 @@ Research Fellowship and by the University of Pennsylvania's Benjamin Franklin
 Fellowship.
 
 You can contact me at [firstinitial][lastname][at]sas[dot]upenn[dot]edu.
-
-This website is under construction, sorry that it's a little barebones right
-now.
