@@ -5,7 +5,7 @@ title: Teaching
 
 I TA at Penn during the academic year and teach at
 [Mathcamp](https://mathcamp.org){:target="_blank"} during summers. In undergrad,
-I was a regular course assistant for math and CS courses.
+I was a regular course assistant for math and CS courses. In Spring 2026, I am coteaching a pilot workshop with three other Penn graduate students at State Correctional Institution Chester.
 
 ### At Penn
 
@@ -19,6 +19,29 @@ I was a regular course assistant for math and CS courses.
     {%- assign subset = upenn | where: "year", y | where: "term", term -%}
     {%- for c in subset -%}
       <li> {{ c.term }} {{ c.year }} — {{ c.code }}: <em>{{ c.title }}</em> </li>
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endfor -%}
+</ul>
+
+### At SCI Chester
+
+<ul>
+{%- assign chester = site.data.teaching | where: "inst", "SCI Chester" -%}
+{%- assign years = chester | map: "year" | uniq | sort | reverse -%}
+{%- assign term_order = "Fall,Spring" | split: "," -%}
+
+{%- for y in years -%}
+  {%- for term in term_order -%}
+    {%- assign subset = chester | where: "year", y | where: "term", term -%}
+    {%- for c in subset -%}
+      <li>
+        {{ c.term }} {{ c.year }} — <em>{{ c.title }}</em>
+        {%- if c.coteachers and c.coteachers.size > 0 -%}
+     , with {{ " " }}
+          {%- include comma-sep.html list=c.coteachers -%}
+        {%- endif -%}
+      </li>
     {%- endfor -%}
   {%- endfor -%}
 {%- endfor -%}
@@ -46,7 +69,7 @@ share content and discuss things I would change :).
       <li>
         {{ c.year }} Week {{ c.week }} — <em>{{ c.title }}</em>
         {%- if c.coteachers and c.coteachers.size > 0 -%}
-					, with {{ " " }}
+     , with {{ " " }}
           {%- include comma-sep.html list=c.coteachers -%}
         {%- endif -%}
         {%- if c.description -%}
