@@ -1,10 +1,14 @@
 - title: Math in the Courtroom
   inst: SCI Chester
   coteachers:
-    - Athina Avrantini
-    - Maxine Calle
-    - Mona Merling
-    - Marc Muhleisen
+    - name: Athina Avrantini
+      url: https://www.math.upenn.edu/people/athina-avrantini
+    - name: Maxine Calle
+      url: https://web.sas.upenn.edu/callem/
+    - name: Mona Merling
+      url: https://www2.math.upenn.edu/~mmerling/
+    - name: Marc Muhleisen
+      url: https://www.math.upenn.edu/people/marc-muhleisen
   term: Spring
   year: 2026
 
@@ -26,7 +30,7 @@
 - title: Category Theory from Scratch
   inst: Mathcamp
   coteachers:
-  - Della Hendrickson
+    - Della Hendrickson
   year: 2025
   week: 2
   files: category-theory-from-scratch
@@ -70,7 +74,6 @@
   description: >
     An introduction to the combinatorics of saturated transfer systems and
     submonoids.
-
 
 - title: Computer Science Fundamentals I
   code: CSCI 121

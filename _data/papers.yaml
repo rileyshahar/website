@@ -3,14 +3,17 @@
   arxiv: "2508.20786"
   status: submitted
   coauthors:
-  - Caoilainn Kirkpatrick
-  - Amelie el Mahmoud
-  - Kyle Ormsby
-  - Angélica M. Osorno
-  - Dale Schandelmeier-Lynch
-  - Lixing Yi
-  - Avery Young
-  - Saron Zhu
+    - Caoilainn Kirkpatrick
+    - Amelie el Mahmoud
+    - name: Kyle Ormsby
+      url: https://kyleormsby.github.io/
+    - name: Angélica M. Osorno
+      url: https://people.reed.edu/~aosorno/
+    - Dale Schandelmeier-Lynch
+    - Lixing Yi
+    - name: Avery Young
+      url: https://cas.uoregon.edu/directory/mathematics/all/avey
+    - Saron Zhu
   abstract: >
     Given a finite commutative monoid $$M$$, we show that submonoids of
     $$M\times [n]$$ --- where $$[n] = \{0,1,\ldots,n\}$$ is equipped with the

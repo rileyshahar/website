@@ -15,9 +15,11 @@ graduate students. Each meeting will focus on a different topic of contemporary
 research interest, with two advanced talks in the afternoon and two “pre-talks”
 in the morning.
 
-The conference is organized by Riley Shahar (Penn) and Nooria Ahmed (Hopkins).
-Past organizers include Maxine Calle, Anish Chedalavada, and Ben Spitz. See
-previous editions of the conference on
+The conference is organized by [Riley Shahar](https://rileyshahar.com) (Penn)
+and Nooria Ahmed (Hopkins). Past organizers include
+[Maxine Calle](https://web.sas.upenn.edu/callem/),
+[Anish Chedalavada](https://aragogh.github.io/), and
+[Ben Spitz](https://benspitz.com/). See previous editions of the conference on
 [Maxine's website](https://web.sas.upenn.edu/callem/amtrak/), from which the
 conference description is shamelessly stolen.
 

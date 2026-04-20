@@ -4,10 +4,10 @@ title: Teaching
 ---
 
 I TA at Penn during the academic year and teach at
-[Mathcamp](https://mathcamp.org){:target="\_blank"} during summers. In
-undergrad, I was a regular course assistant for math and CS courses. In Spring
-2026, I am coteaching a pilot workshop with three other Penn graduate students
-at State Correctional Institution Chester.
+[Mathcamp](https://mathcamp.org) during summers. In undergrad, I was a regular
+course assistant for math and CS courses. In Spring 2026, I am coteaching a
+pilot workshop with three other Penn graduate students at State Correctional
+Institution Chester.
 
 ### At Penn
 

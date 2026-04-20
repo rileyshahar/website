@@ -20,7 +20,7 @@ soon!
       {%- assign list=p.coauthors -%}
       {%- include comma-sep.html list=list -%}
     {%- endif -%}
-    {%- if p.arxiv %} — <a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank">arXiv:{{ p.arxiv }}</a>{% endif -%}
+    {%- if p.arxiv %} — <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a>{% endif -%}
     {%- if p.status %} ({{ p.status }}){% endif -%}
     {% endcapture %}
 
@@ -42,7 +42,7 @@ soon!
     <em>{{ t.title }}</em>
     {%- if t.venue -%} —
       {%- if t.venue_url -%}
-        <a href="{{ t.venue_url }}" target="_blank">{{ t.venue }}</a>
+        <a href="{{ t.venue_url }}">{{ t.venue }}</a>
       {%- else -%}
         {{ t.venue }}
       {%- endif -%}
@@ -66,7 +66,7 @@ soon!
     <em>{{ t.title }}</em>
     {%- if t.venue -%} —
       {%- if t.venue_url -%}
-        <a href="{{ t.venue_url }}" target="_blank">{{ t.venue }}</a>
+        <a href="{{ t.venue_url }}">{{ t.venue }}</a>
       {%- else -%}
         {{ t.venue }}
       {%- endif -%}

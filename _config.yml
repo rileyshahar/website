@@ -9,3 +9,6 @@ repo: https://github.com/rileyshahar/website
 markdown: kramdown
 kramdown:
   math_engine: katex
+
+plugins:
+  - jekyll-target-blank
