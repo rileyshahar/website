@@ -1,12 +1,13 @@
 ---
 layout: base
 title: Research
+published: false
 ---
 
 I'm young and there is not much here yet... but hopefully there will be more
 soon!
 
-### Research Papers
+## Research Papers
 
 <ul>
 {%- assign papers = site.data.papers | sort: "date" | reverse -%}
@@ -31,7 +32,7 @@ soon!
 {%- endfor -%}
 </ul>
 
-### Research Talks
+## Research Talks
 
 <ul>
 {%- assign talks = site.data.research-talks | sort: "date" | reverse -%}
@@ -55,7 +56,7 @@ soon!
 {%- endfor -%}
 </ul>
 
-### Expository Talks
+## Expository Talks
 
 <ul>
 {%- assign talks = site.data.expository-talks | sort: "date" | reverse -%}
