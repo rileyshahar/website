@@ -1,33 +1,34 @@
 ---
 layout: base
-title: Home
+title: Hi!
 title_override: Riley Shahar
 ---
 
-<img style="float: right;" width="200" src="assets/images/profile.png">
+<img class="profile round" src="assets/images/profile.png">
 
-Hi! I'm a second-year PhD student in mathematics at the University of
-Pennsylvania, where I work with
-[Mona Merling](https://www2.math.upenn.edu/~mmerling/) on homotopy theory and
-related areas. I am also interested in how we can make math more accessible and
-more friendly, both narrowly in our communication and teaching, and broadly in
-how we engage with mathematical communities and mathematical culture.
+I'm a second-year PhD student in mathematics at the University of Pennsylvania,
+working with [Mona Merling](https://www2.math.upenn.edu/~mmerling/).
 
-I co-organize the [graduate pizza seminar](https://pizza-seminar.github.io) and
-run lots of departmental social activities at Penn. During summers, I teach at
-[Canada/USA Mathcamp](https://mathcamp.org). With Nooria Ahmed, I organize the
-[AMTRaK](amtrak) conference.
-
-Before Penn, I was a mathematics-computer science major at Reed College. I wrote
-my [undergraduate thesis](assets/undergrad-thesis.pdf) with
-[Angélica Osorno](https://people.reed.edu/~aosorno/) and
-[Adam Groce](https://people.reed.edu/~agroce/) on categorical models of
-cryptography, which won the Class of '21 Award. I was an organizer of both the
-math and CS student groups, and I co-organized the CS peer mentorship program
-and the math student colloquium.
-
-I am honored to be supported by the National Science Foundation's Graduate
-Research Fellowship and by the University of Pennsylvania's Benjamin Franklin
-Fellowship.
+My research interests are currently in homotopy theory and category theory. I
+spend a lot of time thinking about how we can make math more accessible and
+friendly, both narrowly in our exposition and teaching, and broadly in how we
+engage with mathematical communities and mathematical culture.
 
 You can contact me at [firstinitial][lastname][at]sas[dot]upenn[dot]edu.
+
+## About Me
+
+- I co-organize the [graduate pizza seminar](https://pizza-seminar.github.io)
+  and run lots of departmental social activities at Penn. During summers, I
+  teach at [Canada/USA Mathcamp](https://mathcamp.org). With Nooria Ahmed, I
+  organize the [AMTRaK](amtrak) conference.
+- Before Penn, I was a mathematics-computer science major at Reed College. My
+  [undergraduate thesis](assets/undergrad-thesis.pdf), supervised by
+  [Angélica Osorno](https://people.reed.edu/~aosorno/) and
+  [Adam Groce](https://people.reed.edu/~agroce/) on categorical models of
+  cryptography, was honored with the Class of '21 Award. I was an organizer of
+  both the math and CS student groups, and I co-organized the CS peer mentorship
+  program and the math student colloquium.
+- I am honored to be supported by the National Science Foundation's Graduate
+  Research Fellowship and by the University of Pennsylvania's Benjamin Franklin
+  Fellowship.

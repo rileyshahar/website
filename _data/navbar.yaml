@@ -1,8 +1,14 @@
 - title: Home
   url: /
 
-- title: Research
-  url: /research.html
+- title: Math
+  url: /math.html
+
+# - title: Research
+#   url: /research.html
+
+# - title: Exposition
+#   url: /exposition.html
 
 - title: Teaching
   url: /teaching.html

@@ -1,3 +1,40 @@
+- title: Parameterized higher category theory
+  date: 2026-04-15
+  venue: Penn Oral Qualifying Exam
+  abstract:
+    We motivate and introduce the theory of parameterized higher categories,
+    with an eye towards Nardin's universal property of the parameterized
+    category $$\underline{Sp}_G$$ of $$G$$-spectra and the corresponding
+    comparison of spectral Mackey functors with orthgonal $$G$$-spectra.
+
+- title: Categorical Fraïssé theory
+  date: 2026-04-07
+  venue: Penn Model Theory Seminar
+  abstract:
+    We introduce the 2007 paper of Kubiś on Fraïssé sequences. We compare this
+    approach to the traditional model-theoretic approach, and discuss subtelties
+    involved in transfinite Fraïssé sequences.
+
+- title: What if equality but geometry is just vibes?
+  date: 2025-07-10
+  venue: Mathcamp Colloquium
+  abstract: >
+    In math we often encounter operations—like the multiplication of real
+    numbers—with nice properties, like the associative property (xy)z = x(yz).
+    We then define algebraic gadgets via listing certain desir- able properties,
+    and algebra is in some sense the study of these abstract algebraic gadgets.
+    But what if these equalities held not literally ”on the nose,” but only up
+    to some weaker notion of equivalence? And then what if that notion of
+    equivalence, itself, has some properties of its own, each of which also only
+    hold up to some second notion of equivalence? And then what if this process
+    repeats forever?
+
+    This seemingly far-fetched situation in fact occurs in many places in modern
+    mathematics. The study of situations like this—sometimes called homotopy
+    theory or higher algebra—is an extremely active area of research. This talk
+    will give a zero-prerequisite geometric example of such a situation, and
+    discuss some of the abstract tools we use to get a handle on it.
+
 - title: A survey of directed topology
   date: 2025-09-30
   venue: Penn Graduate Geometry-Topology Seminar
@@ -43,8 +80,7 @@
     dual, logical interpretation of topological spaces. In this interpretation,
     open sets behave like "propositions subject to finite proof." This
     talk---which assumes no knowledge of mathematical logic---will explore this
-    perspective, in particular as it relates to point-free topology and
-    sheaves.
+    perspective, in particular as it relates to point-free topology and sheaves.
 
 - title: Artin gluing in logic
   date: 2025-02-10
@@ -102,8 +138,8 @@
   abstract: >
     We give a high-level intuition for why spaces with highly-coherent
     homotopy-commutative and associative multiplications should model infinite
-    loop spaces. We discuss two machines for identifying such space spaces\: May's
-    operads and Segal's gamma spaces. We conclude with a discussion of
+    loop spaces. We discuss two machines for identifying such space spaces\:
+    May's operads and Segal's gamma spaces. We conclude with a discussion of
     categories of operators and the May-Thomason uniqueness theorem for infinite
     loop space machines.
 

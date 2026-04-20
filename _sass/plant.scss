@@ -1,0 +1,30 @@
+.plant-state {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.plant-widget {
+  display: inline-block;
+  width: 1.8em;
+  vertical-align: text-bottom;
+
+  .plant-stage {
+    display: none;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  #plant-#{$i}:checked ~ .plant-widget {
+    .stage-#{$i} {
+      display: block;
+    }
+  }
+}

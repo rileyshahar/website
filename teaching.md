@@ -3,13 +3,11 @@ layout: base
 title: Teaching
 ---
 
-I TA at Penn during the academic year and teach at
-[Mathcamp](https://mathcamp.org) during summers. In undergrad, I was a regular
-course assistant for math and CS courses. In Spring 2026, I am coteaching a
-pilot workshop with three other Penn graduate students at State Correctional
-Institution Chester.
+I love to teach.
 
-### At Penn
+## Penn
+
+I TA at Penn some semesters of the academic year.
 
 <ul>
 {%- assign upenn = site.data.teaching | where: "inst", "University of Pennsylvania" -%}
@@ -23,7 +21,10 @@ Institution Chester.
 
 </ul>
 
-### At SCI Chester
+## SCI Chester
+
+In Spring 2026, I cotaught a pilot workshop with three other Penn graduate
+students at State Correctional Institution Chester.
 
 <ul>
 {%- assign chester = site.data.teaching | where: "inst", "SCI Chester" -%}
@@ -39,14 +40,14 @@ Institution Chester.
 
 </ul>
 
-### At Mathcamp
+## Mathcamp
 
-Teaching at Mathcamp is a unique experience. Over the course of a summer, a
-Mathcamp instructor designs and teaches (approximately) five (approximately)
-weeklong courses on subjects of their choosing, targeted towards extremely
-motivated high-school-aged students. I would be super excited to talk with
-anyone about the pedagogical choices behind any of these classes, as well as to
-share content and discuss things I would change :).
+Teaching at [Mathcamp](https://mathcamp.org) is a unique experience. Over the
+course of a summer, a Mathcamp instructor designs and teaches (approximately)
+five (approximately) weeklong courses on subjects of their choosing, targeted
+towards extremely motivated high-school-aged students. I would be super excited
+to talk with anyone about the pedagogical choices behind any of these classes,
+as well as to share content and discuss things I would change :).
 
 <ul>
 {%- assign mathcamp = site.data.teaching | where: "inst", "Mathcamp" -%}
@@ -70,7 +71,7 @@ share content and discuss things I would change :).
 
 </ul>
 
-### At Reed
+## Reed
 
 Course-assisting at Reed consists of grading, holding office hours, and being an
 intermediary between the students and professor.
