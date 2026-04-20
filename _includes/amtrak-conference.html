@@ -1,11 +1,14 @@
 <!-- preliminaries -->
 {%- assign c = include.conference -%} {%- assign conference_id = c.slug |
 default: c.title -%} {%- assign uid = "conference-" | append: conference_id |
-slugify -%} {%- assign sr_target = c.topic | default: c.title -%}
+slugify -%} {%- assign sr_target = c.topic | default: c.title -%} {%- assign
+venue_label = c.venue | replace_first: "the ", "" | replace_first: "The ", ""
+-%}
 
 <!-- label -->
-{% capture label %}{{ c.title }} ({{ c.date | date: "%B %Y" }}){% if c.topic %}:
-{{ c.topic }}{% endif %}{% endcapture %}
+{% capture label %}{{ c.title }} ({{ c.date | date: "%B %Y" }}{% if venue_label
+%}, {{ venue_label }}{% endif %}){% if c.topic %}: {{ c.topic }}{% endif %}{%
+endcapture %}
 
 <!-- body -->
 {% capture body %} {% capture opening %} {{ c.title }} was held on {{ c.date |
@@ -27,13 +30,43 @@ markdownify }}
   </thead>
   <tbody>
     {% for item in c.schedule %}
+    {% assign start_parts = item.start | split: ":" %}
+    {% assign start_hour = start_parts[0] %}
+    {% assign start_minute = start_parts[1] | default: "00" %}
+    {% if start_minute == "00" %}
+    {% assign start_display = start_hour %}
+    {% else %}
+    {% assign start_display = start_hour | append: ":" | append: start_minute %}
+    {% endif %}
+
+    {% assign time_display = start_display %}
+    {% if item.end %}
+    {% assign end_parts = item.end | split: ":" %}
+    {% assign end_hour = end_parts[0] %}
+    {% assign end_minute = end_parts[1] | default: "00" %}
+    {% if end_minute == "00" %}
+    {% assign end_display = end_hour %}
+    {% else %}
+    {% assign end_display = end_hour | append: ":" | append: end_minute %}
+    {% endif %}
+    {% assign time_display = start_display | append: "-" | append: end_display %}
+    {% elsif item.onward %}
+    {% assign time_display = start_display | append: " onward" %}
+    {% endif %}
     <tr>
-      <td>{{ item.time }}</td>
+      <td>{{ time_display }}</td>
       <td>{{ item.event }}</td>
       <td>
-        {% if item.location.url %}
+        {% if item.location.latitude and item.location.longitude %}
+        {% capture maps_url %}https://www.google.com/maps/search/?api=1&query={{ item.location.latitude }},{{ item.location.longitude }}{% endcapture %}
+        <a href="{{ maps_url }}">{{ item.location.name }}</a>
+        {% elsif item.location.url %}
         <a href="{{ item.location.url }}">{{ item.location.name }}</a>
-        {% else %} {{ item.location.name | default: item.location }} {% endif %}
+        {% elsif item.location %}
+        {{ item.location.name | default: item.location }}
+        {% else %}
+        —
+        {% endif %}
       </td>
     </tr>
     {% endfor %}
@@ -43,11 +76,31 @@ markdownify }}
 <h2>Talks</h2>
 
 {% for talk in c.talks %}
+{% if forloop.index <= 2 %}
+{% assign talk_kind = "Pretalk" %}
+{% assign talk_number = forloop.index %}
+{% else %}
+{% assign talk_kind = "Talk" %}
+{% assign talk_number = forloop.index | minus: 2 %}
+{% endif %}
 <h3>
-  Talk {{ forloop.index }}: {{ talk.speaker }}{% if talk.affiliation %} ({{
+  {{ talk_kind }} {{ talk_number }}: {{ talk.speaker }}{% if talk.affiliation %} ({{
   talk.affiliation }}){% endif %}, {{ talk.title }}
 </h3>
 
-{{ talk.abstract | markdownify }} {% endfor %} {% endcapture %} {% assign sr =
+{% if talk.abstract %}
+{% assign talk_uid = uid | append: "-talk-" | append: forloop.index %}
+{% assign talk_sr_target = talk.title | default: "talk " | append: forloop.index %}
+{% assign talk_label = "Abstract" %}
+{% assign talk_sr = "Toggle abstract for " | append: talk_sr_target %}
+{% include toggle.html
+  label=talk_label
+  uid=talk_uid
+  sr=talk_sr
+  body=talk.abstract
+  quote=1
+%}
+{% endif %}
+{% endfor %} {% endcapture %} {% assign sr =
 "Toggle details for " | append: sr_target %} {% include toggle.html label=label
 uid=uid sr=sr body=body quote=1 %}

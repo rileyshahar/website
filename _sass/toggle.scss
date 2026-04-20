@@ -11,32 +11,30 @@ $btn-px: 0.7rem;
 .toggle {
   position: absolute;
   left: -9999px;
+}
 
-  & + label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: $toggle-size;
-    height: $toggle-size;
-    cursor: pointer;
-    user-select: none;
+.toggle-block > .toggle ~ .toggle-head label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $toggle-size;
+  height: $toggle-size;
+  cursor: pointer;
+  user-select: none;
 
-    &::before {
-      content: "▶";
-      font-size: $toggle-icon-size;
-      color: black;
-      line-height: 1;
-    }
-  }
-
-  &:checked {
-    & + label::before {
-      content: "▼";
-    }
+  &::before {
+    content: "▶";
+    font-size: $toggle-icon-size;
+    color: black;
+    line-height: 1;
   }
 }
 
-.toggle-block:has(.toggle:checked) .toggleable-body {
+.toggle-block > .toggle:checked ~ .toggle-head label::before {
+  content: "▼";
+}
+
+.toggle-block > .toggle:checked ~ .toggleable-body {
   display: block;
 }
 

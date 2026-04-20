@@ -15,56 +15,61 @@
     Mathematics Department at Penn.
 
   schedule:
-    - time: "9–10"
+    - start: "9:00"
+      end: "10:00"
       event: "Breakfast"
       location:
         name: "DRL A6"
-        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+        latitude: 39.952099
+        longitude: -75.189903
 
-    - time: "10–11"
+    - start: "10:00"
+      end: "11:00"
       event: "Pretalk 1: Fangji Liu"
       location:
         name: "DRL A6"
-        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+        latitude: 39.952099
+        longitude: -75.189903
 
-    - time: "11–11:30"
-      event: "Break"
-      location:
-        name: "—"
-
-    - time: "11:30–12:30"
+    - start: "11:30"
+      end: "12:30"
       event: "Pretalk 2: Mattie Ji"
       location:
         name: "LRSM 112B"
-        url: "https://facilities.upenn.edu/maps/locations/laboratory-research-structure-matter"
+        latitude: 39.9529
+        longitude: -75.189598
 
-    - time: "12:30–2"
+    - start: "12:30"
+      end: "2:00"
       event: "Lunch"
-      location:
-        name: "—"
 
-    - time: "2–3"
+    - start: "2:00"
+      end: "3:00"
       event: "Talk 1: Maru Sarazola"
       location:
         name: "DRL A4"
-        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+        latitude: 39.952099
+        longitude: -75.189903
 
-    - time: "3:15–3:45"
+    - start: "3:15"
+      end: "3:45"
       event: "Department tea"
       location:
         name: "DRL 4E17"
-        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+        latitude: 39.952099
+        longitude: -75.189903
 
-    - time: "4–5"
+    - start: "4:00"
+      end: "5:00"
       event: "Talk 2: Cary Malkiewich"
       location:
         name: "DRL A4"
-        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+        latitude: 39.952099
+        longitude: -75.189903
 
-    - time: "5–6"
-      event: "Dinner"
-      location:
-        name: "—"
+    - start: "5:00"
+      onward: true
+      event: "Dinner and hanging out"
 
   talks:
     - speaker: "Maru Sarazola"
@@ -83,7 +88,7 @@
         much else is known in terms of its higher homotopical information. In this talk,
         I will describe joint work with Maxine Calle where we provide a new simplicial
         model for cut-and-paste K-theory in the spirit of Waldhausen's S-dot
-        construction. We will discuss our progress in computing K_1 of this spectrum,
+        construction. We will discuss our progress in computing $$K_1$$ of this spectrum,
         and how it encodes information about the cut-and-paste automorphisms of
         manifolds.
 
@@ -105,3 +110,484 @@
         along any prescribed set of hyperplanes. This makes more computations possible,
         including a recent computation by Holley for all polygons in the Euclidean plane
         whose edges have rational slope.
+
+- slug: amtrak-iv
+  title: "AMTRaK IV"
+  topic: "Homological Stability"
+  date: 2025-04-04
+  venue: "the University of Pennsylvania"
+  intro: >
+    The conference was themed around homological stability and featured research
+    talks by [Søren Galatius](https://sorengalatius.com) and [Nir
+    Gadish](https://www.sas.upenn.edu/~ngadish/), with pretalks by [Fangji
+    Liu](https://www.math.upenn.edu/people/fangji-liu) and [Riley
+    Shahar](https://rileyshahar.com).
+
+  schedule:
+    - start: "9:45"
+      end: "10:00"
+      event: "Welcome and coffee"
+      location:
+        name: "DRL A1"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "10:00"
+      end: "11:00"
+      event: "Pretalk 1: Fangji Liu"
+      location:
+        name: "DRL A1"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "11:00"
+      end: "12:00"
+      event: "Pretalk 2: Riley Shahar"
+      location:
+        name: "DRL A1"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "12:00"
+      end: "2:00"
+      event: "Lunch"
+
+    - start: "2:00"
+      end: "3:00"
+      event: "Talk 1: Søren Galatius"
+      location:
+        name: "DRL A4"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "3:15"
+      end: "3:45"
+      event: "Tea"
+      location:
+        name: "DRL 4E17"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "4:00"
+      end: "5:00"
+      event: "Talk 2: Nir Gadish"
+      location:
+        name: "DRL A4"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "5:00"
+      onward: true
+      event: "Dinner and hanging out"
+
+  talks:
+    - speaker: "Fangji Liu"
+      affiliation: "University of Pennsylvania"
+      title: "Homological stability and Quillen's argument"
+      abstract: |
+        This talk will introduce the ideas of homological stability and highlight
+        some important examples. The second part of the talk will focus on
+        Quillen's spectral sequence argument for the homological stability of
+        symmetric groups.
+
+    - speaker: "Riley Shahar"
+      affiliation: "University of Pennsylvania"
+      title: "Connectivity of simplicial complexes: A toolbox"
+      abstract: |
+        This talk will elaborate on the connectivity arguments that were swept
+        under the rug during pre-talk 1. In particular, we will focus on tools
+        and techniques coming from discrete Morse theory. After introducing the
+        basics of discrete Morse theory, we will use it to prove the
+        Solomon-Tits Theorem.
+
+    - speaker: "Søren Galatius"
+      affiliation: "Columbia University"
+      title: "Homological stability for moduli spaces of manifolds"
+      abstract: |
+        I will discuss an instance of homological stability which is not about
+        homology of discrete groups, but whose proof nevertheless is very
+        similar to that for the symmetric groups, discussed in section 2 of the
+        notes by Kupers mentioned in pre-talk 1.
+
+    - speaker: "Nir Gadish"
+      affiliation: "University of Pennsylvania"
+      title: "Homological stability from the point of view of cells"
+      abstract: |
+        Virtually every homological stability argument proceeds by showing that
+        some (semi-)simplicial complex is highly connected. Finding the right
+        complex to use is somewhat of an art, but they usually follow a certain
+        pattern of being the collection of "destabilizations" of an object. But
+        where do these complexes come from? And what are they measuring?
+
+        In this talk I will present a recent observation of Randal-Williams,
+        that the complexes of destabilizations in fact measure the $$E_2$$-cells
+        needed to construct the classifying spaces of the groups in question,
+        and thus most examples of homological stability are a consequence of
+        stability for the $$E_2$$-operad.
+
+- slug: amtrak-iii
+  title: "AMTRaK III"
+  topic: "Hermitian K-theory and Motivic Homotopy Theory"
+  date: 2025-02-28
+  venue: "the University of Virginia"
+  intro: >
+    The conference was themed around Hermitian K-theory and motivic homotopy
+    theory and featured two research talks by [Thomas
+    Brazelton](https://tbrazel.github.io), with pretalks by [Albert
+    Yang](https://kclo3-naoh.github.io/) and [Ben Spitz](https://benspitz.com/).
+
+  schedule:
+    - start: "10:00"
+      end: "10:50"
+      event: "Welcome and coffee"
+      location:
+        name: "Kerchof 314"
+        latitude: 38.03235
+        longitude: -78.50823
+
+    - start: "11:00"
+      end: "12:00"
+      event: "Pretalk 1: Albert Yang"
+      location:
+        name: "New Cabell 323"
+        latitude: 38.03263
+        longitude: -78.505
+
+    - start: "12:00"
+      end: "1:00"
+      event: "Pretalk 2: Ben Spitz"
+      location:
+        name: "New Cabell 323"
+        latitude: 38.03263
+        longitude: -78.505
+
+    - start: "1:00"
+      end: "2:30"
+      event: "Lunch"
+
+    - start: "2:30"
+      end: "3:30"
+      event: "Talk 1: Thomas Brazelton"
+      location:
+        name: "New Cabell 323"
+        latitude: 38.03263
+        longitude: -78.505
+
+    - start: "4:00"
+      end: "5:00"
+      event: "Talk 2: Thomas Brazelton"
+      location:
+        name: "New Cabell 323"
+        latitude: 38.03263
+        longitude: -78.505
+
+    - start: "5:00"
+      onward: true
+      event: "Dinner and hanging out"
+
+  talks:
+    - speaker: "Albert Yang"
+      affiliation: "University of Pennsylvania"
+      title: "Introduction to Motivic Homotopy Theory"
+      abstract: |
+        This talk will introduce the basic definitions of motivic homotopy
+        theory, such as Zariski and Nisnevich descent, along with key examples
+        of motivic spaces including Eilenberg–Maclane spaces.
+
+    - speaker: "Ben Spitz"
+      affiliation: "University of Virginia"
+      title: "Postnikov Towers and Obstruction Theory"
+      abstract: |
+        This talk will introduce the construction and properties of Postnikov
+        towers, the basic ideas of obstruction theory, and connections to
+        characteristic classes.
+
+    - speaker: "Thomas Brazelton"
+      affiliation: "Harvard University"
+      title: "A leisurely introduction to Hermitian K-theory"
+      abstract: |
+        We will motivate and introduce the basic ideas of Hermitian K-theory,
+        highlighting the similarities and differences with algebraic K-theory
+        of rings. This will be approached from two perspectives: one being a
+        stripped-down low-tech version of the (very high-tech) story of
+        Poincare $$\infty$$-categories, and the other being the classical picture
+        of the K-theory of exact categories with duality.
+
+        Finally we'll discuss how Hermitian K-theory can be promoted to a
+        motivic spectrum, which is used as a crucial tool to access stable and
+        unstable motivic homotopy groups of spheres.
+
+    - speaker: "Thomas Brazelton"
+      affiliation: "Harvard University"
+      title: "Rank two algebraic vector bundles on smooth affine fourfolds"
+      abstract: |
+        Given a finite CW complex, it is a folklore result in obstruction
+        theory that it admits only finitely many isomorphism classes of complex
+        vector bundles with some prescribed Chern classes. Given a smooth
+        affine variety of finite Krull dimension over a field, we can ask an
+        analogous question for algebraic bundles, and the answer is mostly
+        unknown.
+
+        However Morel's "affine representability" theorem indicates that these
+        sorts of algebraic questions are amenable to techniques from motivic
+        obstruction theory. Following work of Mohan Kumar, Murthy and others in
+        the 20th century, as well as the contemporary research program of Asok
+        and Fasel, we understand that the complexity of these sorts of
+        questions are governed by two factors: (1) the 2-cohomological
+        dimension of the base field, and (2) the corank (dimension of base
+        minus rank of bundle).
+
+        In joint work with Opie and Syed we explore corank two in the first
+        interesting setting. We explore to what extent Chow-valued Chern
+        classes and Chow-Witt-valued Euler classes uniquely classify algebraic
+        vector bundles over smooth affine fourfolds over an algebraically
+        closed field.
+
+- slug: amtrak-ii
+  title: "AMTRaK II"
+  topic: "Dualizable categories and continuous K-theory"
+  date: 2024-11-08
+  venue: "Johns Hopkins University"
+  intro: >
+    The conference was themed around dualizable categories and continuous
+    K-theory and featured research talks by [Liam
+    Keenan](https://sites.google.com/view/liam-keenan/home) and Marco Volpe,
+    with pretalks by Nooria Ahmed and [Anish
+    Chedalavada](https://aragogh.github.io/).
+
+  schedule:
+    - start: "9:30"
+      end: "10:00"
+      event: "Welcome and coffee"
+      location:
+        name: "Krieger 413"
+        latitude: 39.32837
+        longitude: -76.61997
+
+    - start: "10:00"
+      end: "11:00"
+      event: "Pretalk 1: Nooria Ahmed"
+      location:
+        name: "Krieger 411"
+        latitude: 39.32837
+        longitude: -76.61997
+
+    - start: "11:30"
+      end: "12:30"
+      event: "Pretalk 2: Anish Chedalavada"
+      location:
+        name: "Krieger Hall"
+        latitude: 39.32837
+        longitude: -76.61997
+
+    - start: "12:30"
+      end: "2:00"
+      event: "Lunch"
+
+    - start: "2:00"
+      end: "3:15"
+      event: "Talk 1: Liam Keenan"
+      location:
+        name: "Krieger 411"
+        latitude: 39.32837
+        longitude: -76.61997
+
+    - start: "3:30"
+      end: "4:45"
+      event: "Talk 2: Marco Volpe"
+      location:
+        name: "Krieger Hall"
+        latitude: 39.32837
+        longitude: -76.61997
+
+    - start: "5:00"
+      onward: true
+      event: "Dinner and hanging out"
+
+  talks:
+    - speaker: "Nooria Ahmed"
+      affiliation: "Johns Hopkins University"
+      title: "Introduction to dualizable categories and continuous K-theory"
+      abstract: |
+        This talk will review the definition of dualizable categories, and
+        explain (but not prove!) the characterization in terms of compactly
+        exhaustible objects. We will use this to recall the dualizability of
+        $$Shv(X,\mathrm{Sp})$$ and (time permitting) sketch a proof.
+
+    - speaker: "Anish Chedalavada"
+      affiliation: "Johns Hopkins University"
+      title: "Introduction to rigidity and six functor formalism"
+      abstract: |
+        In this talk, we will review Verdier duality, construct the six
+        operations, and define local rigidity and rigidity in connection with
+        Verdier duality.
+
+    - speaker: "Liam Keenan"
+      affiliation: "Brown University"
+      title: "Dualizable categories and trace methods — a sampler"
+      abstract: |
+        Algebraic K-theory, topological Hochschild homology (THH), topological
+        cyclic homology (TC), and topological restriction homology (TR), are
+        all examples of localizing invariants. In this talk, I will sample some
+        of the ways Efimov's theory of dualizable categories and the category
+        of localizing motives interact with these specific invariants.
+
+        In particular, I will discuss (1) the interaction of algebraic K-theory
+        and infinite products of categories (originally studied by
+        Kasprowski—Winges) and (2) how to express THH of any dualizable
+        category completely algebraically. Time permitting, I will discuss some
+        other applications and pose a question or two.
+
+    - speaker: "Marco Volpe"
+      affiliation: "Universität Regensburg"
+      title: "K-theory of sheaves"
+      abstract: |
+        Let X be a locally compact Hausdorff space, C a dualizable stable
+        $$\infty$$-category, and denote by $$Shv(X, C)$$ the $$\infty$$ category of
+        C-valued sheaves on X. In this talk, we explain (in as much detail as
+        time permits) how to compute the K-theory of Shv(X, C) in terms of the
+        compactly supported cohomology of X with coefficients in the spectrum
+        $$K(C)$$.
+
+        The strategy we adopt, which was suggested by Dustin Clausen, consists
+        in providing an axiomatic characterization of sheaf cohomology on
+        compact Hausdorff spaces. If time permits, we will also outline
+        applications to simple homotopy theory and functoriality of
+        Becker-Gottlieb transfers.
+
+- slug: amtrak-i
+  title: "AMTRaK I"
+  topic: "Equivariant and parametrized homotopy theory"
+  date: 2024-09-20
+  venue: "the University of Pennsylvania"
+  intro: >
+    The first AMTRaK was themed around equivariant and parametrized homotopy
+    theory and featured research talks by [Andres
+    Mejia](https://web.sas.upenn.edu/amejia83/) and [Lucy
+    Yang](https://lzyang257.github.io/), with pretalks by [Albert
+    Yang](https://kclo3-naoh.github.io/) and [Maxine
+    Calle](https://web.sas.upenn.edu/callem/).
+
+  schedule:
+    - start: "9:30"
+      end: "10:00"
+      event: "Welcome and coffee"
+      location:
+        name: "DRL 4E17"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "10:00"
+      end: "11:00"
+      event: "Pretalk 1: Albert Yang"
+      location:
+        name: "DRL A1"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "11:00"
+      end: "12:00"
+      event: "Pretalk 2: Maxine Calle"
+      location:
+        name: "DRL A1"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "12:00"
+      end: "1:00"
+      event: "Lunch"
+
+    - start: "1:00"
+      end: "2:00"
+      event: "Talk 1: Andres Mejia"
+      location:
+        name: "DRL 2N36"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "2:00"
+      end: "3:00"
+      event: "Talk 2: Lucy Yang"
+      location:
+        name: "DRL 2N36"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "3:15"
+      end: "4:00"
+      event: "Math Department tea"
+      location:
+        name: "DRL 4E17"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "4:00"
+      end: "5:30"
+      event: "Q&A / Math jam"
+      location:
+        name: "DRL 4E17"
+        latitude: 39.952099
+        longitude: -75.189903
+
+    - start: "5:30"
+      onward: true
+      event: "Dinner and hanging out"
+
+  talks:
+    - speaker: "Albert Yang"
+      affiliation: "University of Pennsylvania"
+      title: "Introduction to Equivariant Homotopy Theory"
+      abstract: |
+        In this talk, we will review the definition of the stable and unstable
+        categories of genuine G-spectra for a finite group G, using the
+        perspective of spectral Mackey functors. We will also define the
+        Hill-Hopkins-Ravenel norm on genuine G-spectra and (if time permits)
+        the isotropy separation sequence.
+
+    - speaker: "Maxine Calle"
+      affiliation: "University of Pennsylvania"
+      title: "Parametrized Equivariant Stable Homotopy Theory"
+      abstract: |
+        In this talk, we will explain how the $$\infty$$-categories of G-spaces and
+        G-spectra upgrade to the parametrized $$\infty$$-categorical setting. We will
+        define genuine $$C_{p}$$-$$E_\infty$$-operads after Nardin-Shah and discuss how being
+        a genuinely G-commutative monoid gives rise to norm maps.
+
+    - speaker: "Andres Mejia"
+      affiliation: "University of Pennsylvania"
+      title: "G-commutative monoids and sheaves on G-manifolds"
+      abstract: |
+        In this talk we will explain how one can adapt (semi)-recent
+        techniques from parametrized homotopy theory to the setting of sheaves
+        on equivariant manifolds. More specifically, one can recover the
+        category of spaces via the category of sheaves on manifolds. An
+        interesting question is what commutative monoids are in this setting.
+
+        One guess is that it's those that possess a covariant functoriality
+        known as a transfer with respect to bundles with compact manifold
+        fiber, but in fact we need much less: it suffices to have transfers
+        along finite covering maps. Quillen conjectured that this was the case
+        and equipped with the tools of Bachmann-Hoyois, the proof of this
+        statement is relatively formal. Recent advances in parametrized
+        equivariant homotopy theory as well as the properties of equivariant
+        sheaves on G-manifolds allows one to assemble these proofs together
+        equivariantly. This talk aims to tell this story in a way that makes a
+        case for the formalism of parametrized equivariant homotopy theory.
+
+    - speaker: "Lucy Yang"
+      affiliation: "Columbia University"
+      title: "Normed E∞-rings in genuine equivariant C_{p}-spectra"
+      abstract: |
+        Genuine equivariant homotopy theory is equipped with a multitude of
+        coherently commutative multiplication structures generalizing the
+        classical notion of an $$E_\infty$$-algebra. Our work concerns the
+        $$C_{p}$$-$$E_\infty$$-algebras of Nardin–Shah with respect to a cyclic group $$C_{p}$$ of prime
+        order.
+
+        We show that many of the higher coherences inherent to the definition
+        of parametrized algebras collapse; in particular, they may be described
+        more simply and conceptually in terms of ordinary $$E_\infty$$-algebras as a
+        diagram category which we call normed algebras. Our main result
+        provides a relatively straightforward criterion for identifying
+        $$C_{p}$$-$$E_\infty$$-algebra structures. We visit some applications of our result
+        to real motivic invariants.
