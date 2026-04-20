@@ -1,0 +1,105 @@
+- slug: amtrak-v
+  title: "AMTRaK V"
+  topic: "Scissors Congruence K-Theory"
+  date: 2026-04-17
+  venue: "the University of Pennsylvania"
+  intro: >
+    The conference was themed around Scissors Congruence K-Theory and featured
+    talks by [Maru Sarazola](https://sites.google.com/view/msarazola/home) and
+    [Cary Malkiewich](https://people.math.binghamton.edu/malkiewich/). It was
+    made possible thanks to the generous support of [Nir
+    Gadish](https://www.sas.upenn.edu/~ngadish/) and [Mona
+    Merling](https://www2.math.upenn.edu/~mmerling/), as well as the Mathematics
+    Department at Penn.
+
+  schedule:
+    - time: "9–10"
+      event: "Breakfast"
+      location:
+        name: "DRL A6"
+        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+
+    - time: "10–11"
+      event: "Pretalk 1: Fangji Liu"
+      location:
+        name: "DRL A6"
+        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+
+    - time: "11–11:30"
+      event: "Break"
+      location:
+        name: "—"
+
+    - time: "11:30–12:30"
+      event: "Pretalk 2: Mattie Ji"
+      location:
+        name: "LRSM 112B"
+        url: "https://facilities.upenn.edu/maps/locations/laboratory-research-structure-matter"
+
+    - time: "12:30–2"
+      event: "Lunch"
+      location:
+        name: "—"
+
+    - time: "2–3"
+      event: "Talk 1: Maru Sarazola"
+      location:
+        name: "DRL A4"
+        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+
+    - time: "3:15–3:45"
+      event: "Department tea"
+      location:
+        name: "DRL 4E17"
+        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+
+    - time: "4–5"
+      event: "Talk 2: Cary Malkiewich"
+      location:
+        name: "DRL A4"
+        url: "https://facilities.upenn.edu/maps/locations/david-rittenhouse-laboratory"
+
+    - time: "5–6"
+      event: "Dinner"
+      location:
+        name: "—"
+
+  talks:
+    - speaker: "Maru Sarazola"
+      affiliation: "University of Minnesota"
+      title: "K-theory of manifolds up to cut-and-paste"
+      abstract: |
+        The classical problem of scissors congruence for polytopes admits a natural
+        translation to the world of manifolds: given two manifolds M and N, one can
+        study whether it's possible to cut M into pieces and reassemble them to obtain
+        N. Recent advances have made it possible to interpret this problem within the
+        framework of algebraic K-theory, providing an exciting new perspective on this
+        problem that upgrades this classical algebraic invariant to the homotopical
+        realm.
+
+        While the Grothendieck group of this K-theory spectrum is well-understood, not
+        much else is known in terms of its higher homotopical information. In this talk,
+        I will describe joint work with Maxine Calle where we provide a new simplicial
+        model for cut-and-paste K-theory in the spirit of Waldhausen's S-dot
+        construction. We will discuss our progress in computing K_1 of this spectrum,
+        and how it encodes information about the cut-and-paste automorphisms of
+        manifolds.
+
+    - speaker: "Cary Malkiewich"
+      affiliation: "Binghamton University"
+      title: "Higher scissors congruence revisited"
+      abstract: |
+        Scissors congruence is the study of polytopes, up to the relation of cutting
+        into finitely many pieces and rearranging the pieces. In the 2010s Zakharevich
+        defined a "higher" version of scissors congruence via K-theory, and in the early
+        2020s my collaborators and I showed that Zakharevich's scissors congruence
+        K-theory is a Thom spectrum, allowing us to make many new computations of the
+        higher K-groups.
+
+        It's rare for K-theory to have such a nice description. Why does it happen in
+        this case? In this talk I'll discuss the proof, and a couple of ways that our
+        understanding of the proof has changed in the last few years. In particular,
+        I'll describe a generalization that restricts to polytopes whose facets lie
+        along any prescribed set of hyperplanes. This makes more computations possible,
+        including a recent computation by Holley for all polygons in the Euclidean plane
+        whose edges have rational slope.

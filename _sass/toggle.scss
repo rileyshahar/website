@@ -33,11 +33,11 @@ $btn-px: 0.7rem;
     & + label::before {
       content: "▼";
     }
-
-    & + label + .toggleable-body {
-      display: block;
-    }
   }
+}
+
+.toggle-block:has(.toggle:checked) .toggleable-body {
+  display: block;
 }
 
 .toggleable-body {
@@ -56,4 +56,3 @@ $btn-px: 0.7rem;
   white-space: nowrap;
   border: 0;
 }
-

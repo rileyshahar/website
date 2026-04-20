@@ -18,7 +18,7 @@ I co-organize the
 [graduate pizza seminar](https://pizza-seminar.github.io){:target="\_blank"} and
 run lots of departmental social activities at Penn. During summers, I teach at
 [Canada/USA Mathcamp](https://mathcamp.org){:target="\_blank"}. With Nooria
-Ahmed, I am organizing the [AMTRaK](amtrak) conference.
+Ahmed, I organize the [AMTRaK](amtrak) conference.
 
 Before Penn, I was a mathematics-computer science major at Reed College. I wrote
 my [undergraduate thesis](assets/undergrad-thesis.pdf){:target="\_blank"} with

@@ -11,8 +11,9 @@ soon!
 <ul>
 {%- assign papers = site.data.papers | sort: "date" | reverse -%}
 {%- for p in papers -%}
-  {%- assign uid = "desc-" | append: c.title | append: "-" | append: c.year | slugify -%}
+  {%- assign uid = "desc-" | append: p.title | append: "-" | append: p.year | slugify -%}
   <li>
+    {% capture label %}
     <em>{{ p.title }}</em>
     {%- if p.coauthors and p.coauthors.size > 0 -%}
       , with {{ " " }}
@@ -21,11 +22,11 @@ soon!
     {%- endif -%}
     {%- if p.arxiv %} — <a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank">arXiv:{{ p.arxiv }}</a>{% endif -%}
     {%- if p.status %} ({{ p.status }}){% endif -%}
+    {% endcapture %}
 
-    {%- if p.abstract -%}
-      {%- assign sr = "Show abstract of " | append: p.title -%}
-      {%- include toggle.html sr=sr body=p.abstract uid=uid markdown=1 -%}
-    {%- endif -%}
+    {%- assign sr = "Show abstract of " | append: p.title -%}
+    {%- include toggle.html label=label sr=sr body=p.abstract uid=uid quote=1 -%}
+
   </li>
 {%- endfor -%}
 </ul>
@@ -37,6 +38,7 @@ soon!
 {%- for t in talks -%}
   {%- assign uid = "desc-" | append: t.title | append: "-" | append: t.year | slugify -%}
   <li>
+    {% capture label %}
     <em>{{ t.title }}</em>
     {%- if t.venue -%} —
       {%- if t.venue_url -%}
@@ -46,10 +48,9 @@ soon!
       {%- endif -%}
       , {{ t.date | date:"%B %Y"  }}
     {%- endif -%}
-    {%- if t.abstract -%}
-      {%- assign sr = "Show abstract of " | append: t.title -%}
-      {%- include toggle.html sr=sr body=t.abstract uid=uid markdown=1 -%}
-    {%- endif -%}
+    {% endcapture %}
+    {%- assign sr = "show abstract of " | append: t.title -%}
+    {%- include toggle.html label=label sr=sr body=t.abstract uid=uid quote=1 -%}
   </li>
 {%- endfor -%}
 </ul>
@@ -61,6 +62,7 @@ soon!
 {%- for t in talks -%}
   {%- assign uid = "desc-" | append: t.title | append: "-" | append: t.year | slugify -%}
   <li>
+    {% capture label %}
     <em>{{ t.title }}</em>
     {%- if t.venue -%} —
       {%- if t.venue_url -%}
@@ -70,10 +72,9 @@ soon!
       {%- endif -%}
       , {{ t.date | date:"%B %Y"  }}
     {%- endif -%}
-    {%- if t.abstract -%}
-      {%- assign sr = "Show abstract of " | append: t.title -%}
-      {%- include toggle.html sr=sr body=t.abstract uid=uid markdown=1 -%}
-    {%- endif -%}
+    {% endcapture %}
+    {%- assign sr = "Show abstract of " | append: t.title -%}
+    {%- include toggle.html label=label sr=sr body=t.abstract uid=uid quote=1 -%}
   </li>
 {%- endfor -%}
 </ul>

@@ -1,0 +1,53 @@
+<!-- preliminaries -->
+{%- assign c = include.conference -%} {%- assign conference_id = c.slug |
+default: c.title -%} {%- assign uid = "conference-" | append: conference_id |
+slugify -%} {%- assign sr_target = c.topic | default: c.title -%}
+
+<!-- label -->
+{% capture label %}{{ c.title }} ({{ c.date | date: "%B %Y" }}){% if c.topic %}:
+{{ c.topic }}{% endif %}{% endcapture %}
+
+<!-- body -->
+{% capture body %} {% capture opening %} {{ c.title }} was held on {{ c.date |
+date: "%B %-d, %Y" }} at {{ c.venue }}.
+
+<!-- intro -->
+{% if c.intro %} {{ c.intro }} {% endif %} {% endcapture %} {{ opening |
+markdownify }}
+
+<h2>Schedule</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Event</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in c.schedule %}
+    <tr>
+      <td>{{ item.time }}</td>
+      <td>{{ item.event }}</td>
+      <td>
+        {% if item.location.url %}
+        <a href="{{ item.location.url }}">{{ item.location.name }}</a>
+        {% else %} {{ item.location.name | default: item.location }} {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Talks</h2>
+
+{% for talk in c.talks %}
+<h3>
+  Talk {{ forloop.index }}: {{ talk.speaker }}{% if talk.affiliation %} ({{
+  talk.affiliation }}){% endif %}, {{ talk.title }}
+</h3>
+
+{{ talk.abstract | markdownify }} {% endfor %} {% endcapture %} {% assign sr =
+"Toggle details for " | append: sr_target %} {% include toggle.html label=label
+uid=uid sr=sr body=body quote=1 %}

@@ -1,4 +1,15 @@
-<input class="toggle" type="checkbox" id="{{ include.uid }}">
-<label for="{{ include.uid }}"><span class="sr-only">{{ include.sr }}</span></label>
-<div class="toggleable-body quote" markdown="1">{{ include.body }}</div>
+<div class="toggle-block">
+  <span class="toggle-head">
+    <span class="toggle-title">{{ include.label }}</span>
+    {% if include.body %}
+    <input class="toggle" type="checkbox" id="{{ include.uid }}" />
+    <label for="{{ include.uid }}">
+      <span class="sr-only">{{ include.sr }}</span>
+    </label>
+    {% endif %}
+  </span>
 
+  {% if include.body %}
+  <div class="toggleable-body {% if include.quote %} quote {% endif %} ">{{ include.body | markdownify }}</div>
+  {% endif %}
+</div>

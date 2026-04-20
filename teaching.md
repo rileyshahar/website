@@ -4,8 +4,10 @@ title: Teaching
 ---
 
 I TA at Penn during the academic year and teach at
-[Mathcamp](https://mathcamp.org){:target="_blank"} during summers. In undergrad,
-I was a regular course assistant for math and CS courses. In Spring 2026, I am coteaching a pilot workshop with three other Penn graduate students at State Correctional Institution Chester.
+[Mathcamp](https://mathcamp.org){:target="\_blank"} during summers. In
+undergrad, I was a regular course assistant for math and CS courses. In Spring
+2026, I am coteaching a pilot workshop with three other Penn graduate students
+at State Correctional Institution Chester.
 
 ### At Penn
 
@@ -14,14 +16,11 @@ I was a regular course assistant for math and CS courses. In Spring 2026, I am c
 {%- assign years = upenn | map: "year" | uniq | sort | reverse -%}
 {%- assign term_order = "Fall,Spring" | split: "," -%}
 
-{%- for y in years -%}
-  {%- for term in term_order -%}
-    {%- assign subset = upenn | where: "year", y | where: "term", term -%}
-    {%- for c in subset -%}
-      <li> {{ c.term }} {{ c.year }} — {{ c.code }}: <em>{{ c.title }}</em> </li>
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endfor -%}
+{%- for y in years -%} {%- for term in term_order -%}
+{%- assign subset = upenn | where: "year", y | where: "term", term -%}
+{%- for c in subset -%} <li> {{ c.term }} {{ c.year }} — {{ c.code }}:
+<em>{{ c.title }}</em> </li> {%- endfor -%} {%- endfor -%} {%- endfor -%}
+
 </ul>
 
 ### At SCI Chester
@@ -31,20 +30,13 @@ I was a regular course assistant for math and CS courses. In Spring 2026, I am c
 {%- assign years = chester | map: "year" | uniq | sort | reverse -%}
 {%- assign term_order = "Fall,Spring" | split: "," -%}
 
-{%- for y in years -%}
-  {%- for term in term_order -%}
-    {%- assign subset = chester | where: "year", y | where: "term", term -%}
-    {%- for c in subset -%}
-      <li>
-        {{ c.term }} {{ c.year }} — <em>{{ c.title }}</em>
-        {%- if c.coteachers and c.coteachers.size > 0 -%}
-     , with {{ " " }}
-          {%- include comma-sep.html list=c.coteachers -%}
-        {%- endif -%}
-      </li>
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endfor -%}
+{%- for y in years -%} {%- for term in term_order -%}
+{%- assign subset = chester | where: "year", y | where: "term", term -%}
+{%- for c in subset -%} <li> {{ c.term }} {{ c.year }} — <em>{{ c.title }}</em>
+{%- if c.coteachers and c.coteachers.size > 0 -%} , with {{ " " }}
+{%- include comma-sep.html list=c.coteachers -%} {%- endif -%} </li>
+{%- endfor -%} {%- endfor -%} {%- endfor -%}
+
 </ul>
 
 ### At Mathcamp
@@ -61,25 +53,21 @@ share content and discuss things I would change :).
 {%- assign years = mathcamp | map: "year" | uniq | sort | reverse -%}
 {%- assign weeks = "1,2,3,4,5" | split: "," -%}
 
-{%- for y in years -%}
-  {%- for week in weeks -%}
-    {%- assign subset = mathcamp | where: "year", y | where: "week", week -%}
-    {%- for c in subset -%}
-      {%- assign uid = "desc-" | append: c.title | append: "-" | append: c.year | append: "-" | append: c.week | slugify -%}
-      <li>
-        {{ c.year }} Week {{ c.week }} — <em>{{ c.title }}</em>
-        {%- if c.coteachers and c.coteachers.size > 0 -%}
-     , with {{ " " }}
-          {%- include comma-sep.html list=c.coteachers -%}
-        {%- endif -%}
-        {%- if c.description -%}
-          {%- assign sr = "Show description of " | append: c.title -%}
-          {%- include toggle.html sr=sr body=c.description uid=uid -%}
-        {%- endif -%}
-      </li>
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endfor -%}
+{%- for y in years -%} {%- for week in weeks -%}
+{%- assign subset = mathcamp | where: "year", y | where: "week", week -%}
+{%- for c in subset -%}
+{%- assign uid = "desc-" | append: c.title | append: "-" | append: c.year | append: "-" | append: c.week | slugify -%}
+
+<li>
+    {% capture label %}
+    {{ c.year }} Week {{ c.week }} — <em>{{ c.title }}</em>
+{%- if c.coteachers and c.coteachers.size > 0 -%} , with {{ " " }}
+{%- include comma-sep.html list=c.coteachers -%} {%- endif -%} {% endcapture %}
+{%- assign sr = "Show description of " | append: c.title -%}
+{%- include toggle.html label=label sr=sr body=c.description uid=uid quote=1 -%}
+
+</li> {%- endfor -%} {%- endfor -%} {%- endfor -%}
+
 </ul>
 
 ### At Reed
@@ -92,12 +80,9 @@ intermediary between the students and professor.
 {%- assign years = reed | map: "year" | uniq | sort | reverse -%}
 {%- assign term_order = "Fall,Spring" | split: "," -%}
 
-{%- for y in years -%}
-  {%- for term in term_order -%}
-    {%- assign subset = reed | where: "year", y | where: "term", term -%}
-    {%- for c in subset -%}
-      <li> {{ c.term }} {{ c.year }} — {{ c.code }}: <em>{{ c.title }}</em> </li>
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endfor -%}
+{%- for y in years -%} {%- for term in term_order -%}
+{%- assign subset = reed | where: "year", y | where: "term", term -%}
+{%- for c in subset -%} <li> {{ c.term }} {{ c.year }} — {{ c.code }}:
+<em>{{ c.title }}</em> </li> {%- endfor -%} {%- endfor -%} {%- endfor -%}
+
 </ul>
