@@ -4,6 +4,8 @@ title: Home
 title_override: Riley Shahar
 ---
 
+<img style="float: right;" width="200" src="assets/images/profile.png">
+
 Hi! I'm a second-year PhD student in mathematics at the University of
 Pennsylvania, where I work with
 [Mona Merling](https://www2.math.upenn.edu/~mmerling/){:target="\_blank"} on
