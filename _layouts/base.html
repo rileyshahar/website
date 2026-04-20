@@ -30,7 +30,7 @@
 		<header>
 			<div class="container">
 				<div class="d-flex justify-content-between align-items-end">
-					<div><h2 class="mb-0"> Riley Shahar </h2></div>
+          <div><a href="{{ site.url }}" class="nostyle"><h2 class="mb-0"> {{ site.title }} </h2></a></div>
 					<ul class="list-inline mb-0">
 						{% for item in site.data.navbar %}
 							<li class="list-inline-item{% if item.url == page.url %} active{% endif %}">

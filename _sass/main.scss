@@ -62,15 +62,13 @@ footer {
   }
 }
 
-h1 {
-  font-size: calc(1.875rem + 1.5vw);
+a.nostyle {
+  color: inherit;
+  text-decoration: inherit;
 }
 
-main {
-  h2 {
-    display: inline-block;
-    border-bottom: 2px solid $accent;
-  }
+h1 {
+  font-size: calc(1.875rem + 1.5vw);
 }
 
 td {
