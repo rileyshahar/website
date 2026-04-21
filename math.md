@@ -6,34 +6,67 @@ title: Math
 A non-exhaustive list of things I am thinking about (I don't claim that any of
 these ideas are either good or original):
 
-- Crossed simplicial groups: there are some categorical perspectives on crossed
-  simplicial groups that I haven't seen explored much; for instance, a crossed
-  simplicial group is a distributive law between certain monads. Do these
-  perspectives lend any insight to the classical classification? Can we use them
-  to help with the extension problem (for instance can we define cohomology of
-  crossed simplicial groups), or to build a theory of higher crossed simplicial
-  groups?
-- Parameterized cohomology: it is a folklore observation that
-  $$\text{RO}(G)$$-graded cohomology might be better thought of as
-  $$\text{Pic}(\text{Sp}_G)$$-graded, so that we don't have to pick canonical
-  representatives of each representation. (See, for instance, the discussion at
-  the start of section 6 of
-  [these notes](https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/prerequisites_for_carlsson.pdf)
-  of Adams.) This might motivate us to try to consider
-  $$\text{Pic}(\text{Sp}_T)$$-graded cohomology, where $$\text{Sp}_T$$ is the
-  category of $$T$$-spectra coming from parameterized higher category theory. Is
-  there a Brown representability theorem for such things, for instance? What do
-  they look like in the global setting?
-- Stable discrete Morse theory: discrete Morse theory is a powerful toolbox for
-  proving homology equivalences between CW complexes. Much of the theory seems
-  to me to depend only on the combinatorics of cells; and for instance, it has
-  been generalized to the equivariant setting by Freij (although the extension
-  seems far from formal to me). Can we build an analogous theory for cellular
-  spectra? More generally, can we identify some categorical description of the
-  settings in which such theories exist?
+<ul>
+  <li>
+    {% capture crossed_simplicial_groups %}
+There are some categorical perspectives on crossed simplicial groups that I
+haven't seen explored much; for instance, a crossed simplicial group is a
+distributive law between certain monads. Do these perspectives lend any insight
+to the classical classification? Can we use them to help with the extension
+problem (for instance can we define cohomology of crossed simplicial groups), or
+to build a theory of higher crossed simplicial groups?
+    {% endcapture %}
+    {% include toggle.html
+      label="Crossed simplicial groups"
+      sr="Show details about crossed simplicial groups"
+      body=crossed_simplicial_groups
+      uid="math-crossed-simplicial-groups"
+      quote=1
+    %}
+  </li>
+  <li>
+    {% capture parameterized_cohomology %}
+It is a folklore observation that $$\text{RO}(G)$$-graded cohomology might be
+better thought of as $$\text{Pic}(\text{Sp}_G)$$-graded, so that we don't have
+to pick canonical representatives of each representation. (See, for instance,
+the discussion at the start of section 6 of
+[these notes](https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/prerequisites_for_carlsson.pdf)
+of Adams.) This might motivate us to try to consider
+$$\text{Pic}(\text{Sp}_T)$$-graded cohomology, where $$\text{Sp}_T$$ is the
+category of $$T$$-spectra coming from parameterized higher category theory. Is
+there a Brown representability theorem for such things, for instance? What do
+they look like in the global setting?
+    {% endcapture %}
+    {% include toggle.html
+      label="Parameterized cohomology"
+      sr="Show details about parameterized cohomology"
+      body=parameterized_cohomology
+      uid="math-parameterized-cohomology"
+      quote=1
+    %}
+  </li>
+  <li>
+    {% capture stable_discrete_morse_theory %}
+Discrete Morse theory is a powerful toolbox for proving homology equivalences
+between CW complexes. Much of the theory seems to me to depend only on the
+combinatorics of cells; and for instance, it has been generalized to the
+equivariant setting by Freij (although the extension seems far from formal to
+me). Can we build an analogous theory for cellular spectra? More generally, can
+we identify some categorical description of the settings in which such theories
+exist?
+    {% endcapture %}
+    {% include toggle.html
+      label="Stable discrete Morse theory"
+      sr="Show details about stable discrete Morse theory"
+      body=stable_discrete_morse_theory
+      uid="math-stable-discrete-morse-theory"
+      quote=1
+    %}
+  </li>
+</ul>
 
-I would love to talk about these things or anything else---send me an email at
-[firstinitial][lastname][at]sas[dot]upenn[dot]edu!
+I would love to talk about these things or anything
+else---[send me an email](mailto:rshahar@sas.upenn.edu)!
 
 ## Papers
 

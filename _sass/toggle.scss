@@ -13,25 +13,45 @@ $btn-px: 0.7rem;
   left: -9999px;
 }
 
-.toggle-block > .toggle ~ .toggle-head label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: $toggle-size;
-  height: $toggle-size;
-  cursor: pointer;
-  user-select: none;
-
-  &::before {
-    content: "▶";
-    font-size: $toggle-icon-size;
-    color: black;
-    line-height: 1;
-  }
+.toggle-block {
+  display: contents;
 }
 
-.toggle-block > .toggle:checked ~ .toggle-head label::before {
-  content: "▼";
+.toggle-head {
+  position: relative;
+  display: inline;
+}
+
+.toggle-title {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.toggle-title a {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.toggle-hitbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -1.5em;
+  cursor: pointer;
+}
+
+li:has(> .toggle-block > .toggle)::marker {
+  content: "▶  ";
+  font-size: $toggle-icon-size;
+  color: black;
+}
+
+li:has(> .toggle-block > .toggle:checked)::marker {
+  font-size: $toggle-icon-size;
+  content: "▼  ";
 }
 
 .toggle-block > .toggle:checked ~ .toggleable-body {

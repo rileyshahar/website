@@ -89,8 +89,13 @@ img.profile {
 }
 
 .quote {
+  background-color: rgba($accent, 0.06);
   border-left: 0.3rem solid $accent;
   margin-left: 0;
   margin-right: 0;
-  padding-left: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.quote .quote {
+  background-color: rgba($accent, 0.08);
 }

@@ -75,32 +75,30 @@ markdownify }}
 
 <h2>Talks</h2>
 
-{% for talk in c.talks %}
-{% if forloop.index <= 2 %}
-{% assign talk_kind = "Pretalk" %}
-{% assign talk_number = forloop.index %}
-{% else %}
-{% assign talk_kind = "Talk" %}
-{% assign talk_number = forloop.index | minus: 2 %}
-{% endif %}
-<h3>
-  {{ talk_kind }} {{ talk_number }}: {{ talk.speaker }}{% if talk.affiliation %} ({{
-  talk.affiliation }}){% endif %}, {{ talk.title }}
-</h3>
+<ul>
+  {% for talk in c.talks %}
+  <li>
+    {% capture talk_label %}
+    {{ talk.speaker }}{% if talk.affiliation %} ({{ talk.affiliation }}){% endif %}: <em>{{ talk.title }}</em>
+    {% endcapture %}
+    {% if talk.abstract %}
+    {% assign talk_uid = uid | append: "-talk-" | append: forloop.index %}
+    {% assign talk_sr_target = talk.title | default: "talk " | append: forloop.index %}
+    {% assign talk_sr = "Toggle abstract for " | append: talk_sr_target %}
+    {% include toggle.html
+      label=talk_label
+      uid=talk_uid
+      sr=talk_sr
+      body=talk.abstract
+      quote=1
+    %}
+    {% else %}
+    {{ talk_label }}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
 
-{% if talk.abstract %}
-{% assign talk_uid = uid | append: "-talk-" | append: forloop.index %}
-{% assign talk_sr_target = talk.title | default: "talk " | append: forloop.index %}
-{% assign talk_label = "Abstract" %}
-{% assign talk_sr = "Toggle abstract for " | append: talk_sr_target %}
-{% include toggle.html
-  label=talk_label
-  uid=talk_uid
-  sr=talk_sr
-  body=talk.abstract
-  quote=1
-%}
-{% endif %}
-{% endfor %} {% endcapture %} {% assign sr =
+{% endcapture %} {% assign sr =
 "Toggle details for " | append: sr_target %} {% include toggle.html label=label
 uid=uid sr=sr body=body quote=1 %}
