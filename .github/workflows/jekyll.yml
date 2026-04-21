@@ -54,7 +54,7 @@ jobs:
           latexmk_use_lualatex: false
           args: -pdf
       - name: Copy CV PDF to assets
-        run: cp cv/cv.pdf assets/cv.pdf
+        run: cp cv.pdf assets/cv.pdf
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

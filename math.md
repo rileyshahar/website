@@ -98,6 +98,33 @@ soon!
 {%- endfor -%}
 </ul>
 
+## Expository Writing
+
+<ul>
+{%- assign expos = site.data.expository-writing | sort: "date" | reverse -%}
+{%- for p in expos -%}
+  {%- assign uid = "desc-" | append: p.title | append: "-" | append: p.year | slugify -%}
+  <li>
+    {% capture label %}
+    {% if p.pdf %}<a href="assets/{{ p.pdf }}">{% endif %}
+    <em>{{ p.title }}</em>
+    {% if p.pdf %}</a>{% endif %}
+    {%- if p.coauthors and p.coauthors.size > 0 -%}
+      , with {{ " " }}
+      {%- assign list=p.coauthors -%}
+      {%- include comma-sep.html list=list -%}
+    {%- endif -%}
+    {%- if p.notes %} — {{ p.notes }} {% endif -%}  
+    &nbsp;({{ p.year }})
+    {% endcapture %}
+
+    {%- assign sr = "Toggle abstract for " | append: p.title -%}
+    {%- include toggle.html label=label sr=sr body=p.abstract uid=uid quote=1 -%}
+
+  </li>
+{%- endfor -%}
+</ul>
+
 ## Talks
 
 <ul>
