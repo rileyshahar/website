@@ -16,12 +16,15 @@ research interest, with two advanced talks in the afternoon and two “pre-talks
 in the morning.
 
 The conference is organized by [Riley Shahar](https://rileyshahar.com) (Penn)
-and Nooria Ahmed (Hopkins). Past organizers include
+and Nooria Ahmed (Hopkins). Previous organizers include
 [Maxine Calle](https://web.sas.upenn.edu/callem/),
 [Anish Chedalavada](https://aragogh.github.io/), and
-[Ben Spitz](https://benspitz.com/). See previous editions of the conference on
-[Maxine's website](https://web.sas.upenn.edu/callem/amtrak/), from which the
-conference description is shamelessly stolen.
+[Ben Spitz](https://benspitz.com/). The conference would not be possible without
+the generous support of many people. Supporters of past conferences include
+[Nir Gadish](https://www.sas.upenn.edu/~ngadish/), David Gepner, and
+[Mona Merling](https://www2.math.upenn.edu/~mmerling/); the Mathematics
+Departments at Penn, Hopkins, and UVA; and
+[the K-theory foundation](https://sites.unimi.it/ktf/).
 
 <ul>
 {%- assign conferences = site.data.amtraks | sort: "date" | reverse -%}
