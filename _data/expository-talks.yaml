@@ -5,14 +5,14 @@
     We motivate and introduce the theory of parameterized higher categories,
     with an eye towards Nardin's universal property of the parameterized
     category $$\underline{Sp}_G$$ of $$G$$-spectra and the corresponding
-    comparison of spectral Mackey functors with orthgonal $$G$$-spectra.
+    comparison of spectral Mackey functors with orthogonal $$G$$-spectra.
 
 - title: Categorical Fraïssé theory
   date: 2026-04-07
   venue: Penn Model Theory Seminar
   abstract:
     We introduce the 2007 paper of Kubiś on Fraïssé sequences. We compare this
-    approach to the traditional model-theoretic approach, and discuss subtelties
+    approach to the traditional model-theoretic approach, and discuss subtleties
     involved in transfinite Fraïssé sequences.
 
 - title: What if algebra but equality is just vibes?
@@ -138,8 +138,8 @@
   abstract: >
     We give a high-level intuition for why spaces with highly-coherent
     homotopy-commutative and associative multiplications should model infinite
-    loop spaces. We discuss two machines for identifying such space spaces\:
-    May's operads and Segal's gamma spaces. We conclude with a discussion of
+    loop spaces. We discuss two machines for identifying such spaces\: May's
+    operads and Segal's gamma spaces. We conclude with a discussion of
     categories of operators and the May-Thomason uniqueness theorem for infinite
     loop space machines.
 

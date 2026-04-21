@@ -26,6 +26,8 @@ the generous support of many people. Supporters of past conferences include
 Departments at Penn, Hopkins, and UVA; and
 [the K-theory foundation](https://sites.unimi.it/ktf/).
 
+## Past Conferences
+
 <ul>
 {%- assign conferences = site.data.amtraks | sort: "date" | reverse -%}
 {%- for c in conferences -%}

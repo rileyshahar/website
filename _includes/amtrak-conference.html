@@ -18,7 +18,7 @@ date: "%B %-d, %Y" }} at {{ c.venue }}.
 {% if c.intro %} {{ c.intro }} {% endif %} {% endcapture %} {{ opening |
 markdownify }}
 
-<h2>Schedule</h2>
+<h3>Schedule</h3>
 
 <table>
   <thead>
@@ -73,7 +73,7 @@ markdownify }}
   </tbody>
 </table>
 
-<h2>Talks</h2>
+<h3>Talks</h3>
 
 <ul>
   {% for talk in c.talks %}

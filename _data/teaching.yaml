@@ -60,7 +60,7 @@
   description: >
     A survey of various paradoxes from philosophical and mathematical history.
     Each day started with a ~10 minute lecture discussing the paradox, and then
-    students discussed the paradox and talked about how various mathematial
+    students discussed the paradox and talked about how various mathematical
     ideas might help us think about it differently. Paradoxes discussed included
     Zeno's paradoxes of motion, the Sorites paradox and other paradoxes of
     ambiguity, paradoxes of the material conditional, and paradoxes of
@@ -154,7 +154,7 @@
   term: Fall
   year: 2022
 
-- title: Computer Science Fundmanetals II
+- title: Computer Science Fundamentals II
   code: CSCI 221
   inst: Reed College
   term: Spring
