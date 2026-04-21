@@ -64,7 +64,7 @@ as well as to share content and discuss things I would change :).
     {{ c.year }} Week {{ c.week }} — <em>{{ c.title }}</em>
 {%- if c.coteachers and c.coteachers.size > 0 -%} , with {{ " " }}
 {%- include comma-sep.html list=c.coteachers -%} {%- endif -%} {% endcapture %}
-{%- assign sr = "Show description of " | append: c.title -%}
+{%- assign sr = "Toggle description for " | append: c.title -%}
 {%- include toggle.html label=label sr=sr body=c.description uid=uid quote=1 -%}
 
 </li> {%- endfor -%} {%- endfor -%} {%- endfor -%}

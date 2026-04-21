@@ -25,7 +25,7 @@ soon!
     {%- if p.status %} ({{ p.status }}){% endif -%}
     {% endcapture %}
 
-    {%- assign sr = "Show abstract of " | append: p.title -%}
+    {%- assign sr = "Toggle abstract for " | append: p.title -%}
     {%- include toggle.html label=label sr=sr body=p.abstract uid=uid quote=1 -%}
 
   </li>
@@ -50,7 +50,7 @@ soon!
       , {{ t.date | date:"%B %Y"  }}
     {%- endif -%}
     {% endcapture %}
-    {%- assign sr = "show abstract of " | append: t.title -%}
+    {%- assign sr = "Toggle abstract for " | append: t.title -%}
     {%- include toggle.html label=label sr=sr body=t.abstract uid=uid quote=1 -%}
   </li>
 {%- endfor -%}
@@ -74,7 +74,7 @@ soon!
       , {{ t.date | date:"%B %Y"  }}
     {%- endif -%}
     {% endcapture %}
-    {%- assign sr = "Show abstract of " | append: t.title -%}
+    {%- assign sr = "Toggle abstract for " | append: t.title -%}
     {%- include toggle.html label=label sr=sr body=t.abstract uid=uid quote=1 -%}
   </li>
 {%- endfor -%}

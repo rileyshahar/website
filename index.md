@@ -4,7 +4,8 @@ title: Hi!
 title_override: Riley Shahar
 ---
 
-<img class="profile round" src="assets/images/profile.png">
+<img class="profile round" src="assets/images/profile.png" alt="Photo of Riley
+  Shahar">
 
 I'm a second-year PhD student in mathematics at the University of Pennsylvania,
 working with [Mona Merling](https://www2.math.upenn.edu/~mmerling/). My pronouns

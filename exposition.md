@@ -22,7 +22,7 @@ published: false
       , {{ t.date | date:"%B %Y"  }}
     {%- endif -%}
     {% endcapture %}
-    {%- assign sr = "Show abstract of " | append: t.title -%}
+    {%- assign sr = "Toggle abstract for " | append: t.title -%}
     {%- include toggle.html label=label sr=sr body=t.abstract uid=uid quote=1 -%}
   </li>
 {%- endfor -%}

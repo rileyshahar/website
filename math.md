@@ -18,7 +18,7 @@ to build a theory of higher crossed simplicial groups?
     {% endcapture %}
     {% include toggle.html
       label="Crossed simplicial groups"
-      sr="Show details about crossed simplicial groups"
+      sr="Toggle details about crossed simplicial groups"
       body=crossed_simplicial_groups
       uid="math-crossed-simplicial-groups"
       quote=1
@@ -39,7 +39,7 @@ they look like in the global setting?
     {% endcapture %}
     {% include toggle.html
       label="Parameterized cohomology"
-      sr="Show details about parameterized cohomology"
+      sr="Toggle details about parameterized cohomology"
       body=parameterized_cohomology
       uid="math-parameterized-cohomology"
       quote=1
@@ -57,7 +57,7 @@ exist?
     {% endcapture %}
     {% include toggle.html
       label="Stable discrete Morse theory"
-      sr="Show details about stable discrete Morse theory"
+      sr="Toggle details about stable discrete Morse theory"
       body=stable_discrete_morse_theory
       uid="math-stable-discrete-morse-theory"
       quote=1
@@ -89,7 +89,7 @@ soon!
     {%- if p.status %} ({{ p.status }}){% endif -%}
     {% endcapture %}
 
-    {%- assign sr = "Show abstract of " | append: p.title -%}
+    {%- assign sr = "Toggle abstract for " | append: p.title -%}
     {%- include toggle.html label=label sr=sr body=p.abstract uid=uid quote=1 -%}
 
   </li>
@@ -115,7 +115,7 @@ soon!
       , {{ t.date | date:"%B %Y"  }}
     {%- endif -%}
     {% endcapture %}
-    {%- assign sr = "show abstract of " | append: t.title -%}
+    {%- assign sr = "Toggle abstract for " | append: t.title -%}
     {%- include toggle.html label=label sr=sr body=t.abstract uid=uid quote=1 -%}
   </li>
 {%- endfor -%}
@@ -139,7 +139,7 @@ soon!
 <!--       , {{ t.date | date:"%B %Y"  }} -->
 <!--     {%- endif -%} -->
 <!--     {% endcapture %} -->
-<!--     {%- assign sr = "Show abstract of " | append: t.title -%} -->
+<!--     {%- assign sr = "Toggle abstract for " | append: t.title -%} -->
 <!--     {%- include toggle.html label=label sr=sr body=t.abstract uid=uid quote=1 -%} -->
 <!--   </li> -->
 <!-- {%- endfor -%} -->
