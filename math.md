@@ -3,8 +3,8 @@ layout: base
 title: Math
 ---
 
-A non-exhaustive list of things I am thinking about (I don't claim that any of
-these ideas are either good or original):
+A non-exhaustive list of things I am thinking about (click to read more---I
+don't claim that any of these ideas are either good or original):
 
 <ul>
   <li>
