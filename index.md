@@ -31,6 +31,12 @@ You can contact me at [rshahar@sas.upenn.edu](mailto:rshahar@sas.upenn.edu) or
   cryptography, was honored with the Class of '21 Award. I was an organizer of
   both the math and CS student groups, and I co-organized the CS peer mentorship
   program and the math student colloquium.
+- Near the end of undergrad, I wrote some thoughts on
+  [computer science as a liberal art](https://www.reedquest.org/articles/2024/04/06/computer-science-as-a-liberal-art)
+  in Reed's student paper. More personally, I was interviewed for Reed
+  Magazine's
+  [What is a Reedie](https://www.reed.edu/reed-magazine/articles/2024/what-is-a-reedie/riley-shahar.html)
+  series, where I talked about my thesis and broader Reed experience.
 - I am honored to be supported by the National Science Foundation's Graduate
   Research Fellowship and by the University of Pennsylvania's Benjamin Franklin
   Fellowship.
