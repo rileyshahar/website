@@ -3,6 +3,8 @@ layout: base
 title: Math
 ---
 
+## Current Projects
+
 Some things I am currently thinking about (click to read more---I don't claim
 that any of these ideas are either good or original):
 
