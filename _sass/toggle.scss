@@ -8,9 +8,16 @@ $space-2: 0.5rem;
 $btn-py: 0.35rem;
 $btn-px: 0.7rem;
 
+$accent: #7957d5;
+
 .toggle {
   position: absolute;
-  left: -9999px;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .toggle-block {
@@ -63,6 +70,11 @@ li:has(> .toggle-block > .toggle:checked)::marker {
   margin-top: $space-2;
 }
 
+.toggle:focus-visible ~ .toggle-head .toggle-title {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -73,4 +85,12 @@ li:has(> .toggle-block > .toggle:checked)::marker {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle,
+  .toggleable-body,
+  .toggle-head {
+    transition: none;
+  }
 }

@@ -39,6 +39,22 @@ jobs:
           ruby-version: '3' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Install pyyaml
+        run: pip install pyyaml
+      - name: Build CV from YAML
+        run: python scripts/build_cv.py
+      - name: Compile CV PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv/cv.tex
+          latexmk_use_lualatex: false
+          args: -pdf
+      - name: Copy CV PDF to assets
+        run: cp cv/cv.pdf assets/cv.pdf
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

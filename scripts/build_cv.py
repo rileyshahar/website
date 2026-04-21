@@ -27,6 +27,12 @@ LATEX_SUBS = {
 def tex_escape(s: str) -> str:
     return "".join(LATEX_SUBS.get(ch, ch) for ch in s)
 
+def person_name(p) -> str:
+    """Extract a name string from either a plain string or a {name: ..., url: ...} dict."""
+    if isinstance(p, dict):
+        return p.get("name", "")
+    return str(p)
+
 def parse_date(x) -> dt.date | None:
     if x is None:
         return None
@@ -118,7 +124,7 @@ r"\section{Publications}",
         coauthors = p.get("coauthors") or []
         co = ""
         if coauthors:
-            co = r" (with " + tex_escape(", ".join(coauthors)) + ")"
+            co = r" (with " + tex_escape(", ".join(person_name(a) for a in coauthors)) + ")"
         arxiv = p.get("arxiv")
         arxiv_str = str(arxiv).strip() if arxiv is not None else ""
         arxiv_bit = ""
@@ -166,7 +172,7 @@ r"\subsection{State Correctional Institution Chester}",
         coteachers = c.get("coteachers") or []
         with_bit = ""
         if coteachers:
-            with_bit = " (with " + tex_escape(", ".join(coteachers)) + ")"
+            with_bit = " (with " + tex_escape(", ".join(person_name(t) for t in coteachers)) + ")"
         lines += [rf"\cvitem{{{tex_escape(c.get('term',''))} {c.get('year','')}}}{{\emph{{{tex_escape(c.get('title',''))}}}{with_bit}}}"]
 
     lines += [
@@ -177,7 +183,7 @@ r"\subsection{Canada/USA Mathcamp}",
         coteachers = c.get("coteachers") or []
         with_bit = ""
         if coteachers:
-            with_bit = " (with " + tex_escape(", ".join(coteachers)) + ")"
+            with_bit = " (with " + tex_escape(", ".join(person_name(t) for t in coteachers)) + ")"
         lines += [rf"\cvitem{{{c.get('year','')} Week {c.get('week','')}}}{{\emph{{{tex_escape(c.get('title',''))}}}{with_bit}}}"]
 
     lines += [

@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://rileyshahar.com/sitemap.xml

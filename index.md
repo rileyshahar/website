@@ -17,7 +17,7 @@ narrowly in our exposition and teaching, and broadly in how we engage with
 mathematical communities and mathematical culture.
 
 You can contact me at [rshahar@sas.upenn.edu](mailto:rshahar@sas.upenn.edu) or
-[book a meeting](https://fantastical.app/rileyshahar/meet-with-me).
+[book a meeting](https://fantastical.app/rileyshahar/meet-with-me).<!-- Here is my [CV](assets/cv.pdf). -->
 
 ## About Me
 

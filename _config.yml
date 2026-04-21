@@ -12,3 +12,4 @@ kramdown:
 
 plugins:
   - jekyll-target-blank
+  - jekyll-sitemap
