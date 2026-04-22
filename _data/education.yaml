@@ -5,6 +5,13 @@
   end: 2030
   expected: true
   advisor: Mona Merling
+  honors:
+    - National Science Foundation Graduate Research Fellow
+  qualifying_exam:
+    topic: parameterized higher category theory
+    examiners:
+      - Mona Merling
+      - Nir Gadish
 
 - institution: Reed College
   location: Portland, OR
@@ -15,3 +22,5 @@
   advisors:
     - Angélica Osorno
     - Adam Groce
+  honors:
+    - Phi Beta Kappa

@@ -7,20 +7,24 @@
   date: "2025–"
 
 - role: Co-organizer
-  venue: Penn Graduate Pizza Seminar
+  venue: Graduate Pizza Seminar
+  institution: University of Pennsylvania
   url: https://pizza-seminar.github.io
   coorganizers:
     - Chris Dunstan
   date: "2025–26"
 
 - role: Co-organizer
-  venue: Reed College Mathematics Student Colloquium
+  venue: Mathematics Student Colloquium
+  institution: Reed College
   date: "2023–24"
 
 - role: Founder and co-organizer
-  venue: Reed College Computer Science Peer Mentorship Program
+  venue: Computer Science Peer Mentorship Program
+  institution: Reed College
   date: "2022–24"
 
 - role: Organizer
-  venue: "SL(m): Student Liaisons in Mathematics at Reed College"
+  venue: "SL(m): Student Liaisons in Mathematics"
+  institution: Reed College
   date: "2023–24"
