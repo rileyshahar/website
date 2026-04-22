@@ -1,0 +1,30 @@
+- role: Co-organizer
+  venue:
+    "AMTRaK (Atlantic Meeting on Topology, Representation theory, and K-theory)"
+  url: https://rileyshahar.com/amtrak
+  coorganizers:
+    - Nooria Ahmed
+  date: "2025–"
+
+- role: Co-organizer
+  venue: Graduate Pizza Seminar
+  institution: University of Pennsylvania
+  url: https://pizza-seminar.github.io
+  coorganizers:
+    - Chris Dunstan
+  date: "2025–26"
+
+- role: Co-organizer
+  venue: Mathematics Student Colloquium
+  institution: Reed College
+  date: "2023–24"
+
+- role: Founder and co-organizer
+  venue: Computer Science Peer Mentorship Program
+  institution: Reed College
+  date: "2022–24"
+
+- role: Organizer
+  venue: "SL(m): Student Liaisons in Mathematics"
+  institution: Reed College
+  date: "2023–24"

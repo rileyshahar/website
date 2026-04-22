@@ -1,0 +1,23 @@
+- institution: Reed College
+  location: Portland, OR
+  title: Collaborative Mathematics Research Group (CMRG) Participant
+  date: Summer 2024
+  advisors:
+    - Angélica Osorno
+    - Kyle Ormsby
+
+- institution: University of Pennsylvania
+  location: Philadelphia, PA
+  title:
+    Research Experiences for Undergraduates in Programming Languages (REPL)
+    Participant
+  date: Summer 2023
+  advisors:
+    - Steve Zdancewic
+
+- institution: Reed College
+  location: Portland, OR
+  title: Student Research Fellow
+  date: Summer 2022
+  advisors:
+    - Charlie McGuffey
