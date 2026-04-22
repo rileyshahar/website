@@ -5,7 +5,6 @@ _site
 vendor
 Gemfile.lock
 cv/*
-
-# Generated CV artifacts (built by scripts/build_cv.py)
 assets/cv.tex
 assets/cv.pdf
+.cluade
