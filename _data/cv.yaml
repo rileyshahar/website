@@ -1,5 +1,16 @@
 first: "Riley"
 last: "Shahar"
+pronouns: "she/her or they/them"
 email: rshahar@sas.upenn.edu
 website: https://rileyshahar.com
+website_display: rileyshahar.com
 affiliation: University of Pennsylvania
+office: DRL 4C5
+department: Department of Mathematics
+address:
+  - David Rittenhouse Laboratory
+  - 209 S 33rd St
+  - Philadelphia, PA 19104
+research_interests: >
+  Homotopy theory and category theory, especially equivariant and higher
+  algebraic structures and their interactions with logic.

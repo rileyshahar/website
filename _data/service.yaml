@@ -1,0 +1,29 @@
+# Community service, seminar/conference organization, mentorship, and outreach.
+
+- role: Co-organizer
+  venue: "AMTRaK (Atlantic Meeting on Topology, Representation theory, and K-theory)"
+  url: https://web.sas.upenn.edu/callem/amtrak/
+  coorganizers:
+    - Nooria Ahmed
+  date: "2025–"
+
+- role: Co-organizer
+  venue: Penn Graduate Pizza Seminar
+  url: https://pizza-seminar.github.io
+  date: "2025–"
+
+- role: Mentor
+  venue: Canada/USA Mathcamp
+  date: "2025"
+
+- role: Co-organizer
+  venue: Reed College Mathematics Student Colloquium
+  date: "2023–24"
+
+- role: Co-organizer
+  venue: Reed College Computer Science Peer Mentorship Program
+  date: "2022–24"
+
+- role: Leader
+  venue: "SL(m): Student Liaisons in Mathematics, Reed College"
+  date: "2023–24"

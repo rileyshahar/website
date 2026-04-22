@@ -1,0 +1,23 @@
+# Fellowships, grants, and awards. Listed most recent first.
+# `date` is a free-form string so year ranges ("2024–", "2020–21, 2021–22") render naturally.
+
+- name: Graduate Research Fellowship
+  issuer: National Science Foundation
+  date: "2024–"
+
+- name: Benjamin Franklin Fellowship
+  issuer: University of Pennsylvania
+  date: "2024–"
+
+- name: Class of '21 Award
+  issuer: Reed College, Department of Mathematics and Statistics
+  date: "2024"
+  note: For excellence in an undergraduate thesis in mathematics.
+
+- name: Phi Beta Kappa
+  issuer: Reed College
+  date: "2024"
+
+- name: Commendation for Academic Excellence
+  issuer: Reed College
+  date: "2020–21, 2021–22, 2022–23, 2023–24"

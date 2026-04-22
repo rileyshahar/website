@@ -1,0 +1,20 @@
+# Education history, most recent first.
+# `expected: true` marks an end year that hasn't happened yet.
+
+- institution: University of Pennsylvania
+  location: Philadelphia, PA
+  degree: Ph.D. in Mathematics
+  start: 2024
+  end: 2029
+  expected: true
+  advisor: Mona Merling
+
+- institution: Reed College
+  location: Portland, OR
+  degree: B.A. in Mathematics and Computer Science
+  start: 2020
+  end: 2024
+  thesis: "Categories for Cryptographic Composability"
+  advisors:
+    - Angélica Osorno
+    - Adam Groce
