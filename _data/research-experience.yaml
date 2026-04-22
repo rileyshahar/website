@@ -1,24 +1,19 @@
-# Summer and other research positions held prior to or during graduate study.
-
 - institution: Reed College
   location: Portland, OR
-  title: Student Research Fellow
+  title: Collaborative Mathematics Research Group (CMRG) Participant
   date: Summer 2024
   advisors:
     - Angélica Osorno
     - Kyle Ormsby
-  description: >
-    Combinatorics of saturated transfer systems on modular lattices.
 
 - institution: University of Pennsylvania
   location: Philadelphia, PA
-  title: Student Research Fellow
+  title:
+    Research Experiences for Undergraduates in Programming Languages (REPL)
+    Participant
   date: Summer 2023
   advisors:
     - Steve Zdancewic
-  description: >
-    Categorical semantics of linear logic internal to the subobject posets
-    of monoid objects.
 
 - institution: Reed College
   location: Portland, OR
@@ -26,5 +21,3 @@
   date: Summer 2022
   advisors:
     - Charlie McGuffey
-  description: >
-    Competitive analysis of caching algorithms in general models of memory.

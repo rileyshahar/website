@@ -1,6 +1,3 @@
-# Fellowships, grants, and awards. Listed most recent first.
-# `date` is a free-form string so year ranges ("2024–", "2020–21, 2021–22") render naturally.
-
 - name: Graduate Research Fellowship
   issuer: National Science Foundation
   date: "2024–"
@@ -10,9 +7,11 @@
   date: "2024–"
 
 - name: Class of '21 Award
-  issuer: Reed College, Department of Mathematics and Statistics
+  issuer: Reed College
   date: "2024"
-  note: For excellence in an undergraduate thesis in mathematics.
+  note:
+    For "creative work of notable character, involving an unusual degree of
+    initiative and spontaneity."
 
 - name: Phi Beta Kappa
   issuer: Reed College

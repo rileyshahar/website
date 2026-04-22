@@ -1,11 +1,8 @@
-# Education history, most recent first.
-# `expected: true` marks an end year that hasn't happened yet.
-
 - institution: University of Pennsylvania
   location: Philadelphia, PA
   degree: Ph.D. in Mathematics
   start: 2024
-  end: 2029
+  end: 2030
   expected: true
   advisor: Mona Merling
 
