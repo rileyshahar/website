@@ -13,3 +13,6 @@ kramdown:
 plugins:
   - jekyll-target-blank
   - jekyll-sitemap
+
+exclude:
+  - requirements.txt
