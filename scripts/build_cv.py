@@ -1,28 +1,4 @@
 #!/usr/bin/env python3
-"""Generate an academic CV (LaTeX + PDF) from _data/*.yaml.
-
-Reads:
-    _data/cv.yaml                header info
-    _data/education.yaml         degrees and training
-    _data/awards.yaml            fellowships, grants, honors
-    _data/research-experience.yaml   summer research positions
-    _data/papers.yaml            research papers and preprints
-    _data/expository-writing.yaml    notes, articles
-    _data/research-talks.yaml    research talks
-    _data/expository-talks.yaml  expository talks
-    _data/teaching.yaml          courses taught/assisted
-    _data/service.yaml           organizing, mentoring
-
-Writes:
-    assets/cv.tex                generated LaTeX source
-    assets/cv.pdf                compiled PDF (with --compile)
-
-For --compile the script uses whichever LaTeX engine it finds on PATH, in
-order: latexmk, pdflatex, tectonic. Locally this means a standard MacTeX /
-TeX Live install is enough; CI can keep using tectonic. Aux files (.aux,
-.log, .out, etc.) are cleaned up so only the .tex and .pdf remain.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -271,9 +247,7 @@ def education_section(entries: list[dict]) -> str:
             details.append(rf"\item {{\small {label}: {adv}}}")
         if e.get("thesis"):
             thesis = preserve_math_escape(e["thesis"])
-            details.append(
-                rf"\item {{\small Thesis: ``\textit{{{thesis}}}''}}"
-            )
+            details.append(rf"\item {{\small Thesis: ``\textit{{{thesis}}}''}}")
         qe = e.get("qualifying_exam")
         if qe:
             topic = preserve_math_escape(qe["topic"])
@@ -334,23 +308,25 @@ def papers_section(entries: list[dict]) -> str:
     return "\n".join(parts)
 
 
-def expository_writing_section(entries: list[dict], website: str = "") -> str:
-    parts = [r"\begin{itemize}[leftmargin=1.2em,itemsep=0.5ex,topsep=0.2ex]"]
-    sorted_entries = sorted(entries, key=lambda p: str(p.get("year", "")), reverse=True)
-    for p in sorted_entries:
-        title = preserve_math_escape(p["title"])
-        year = str(p.get("year", ""))
-        title_piece = rf"\textit{{{title}}}"
-        if p.get("pdf"):
-            pdf = p["pdf"]
-            url = pdf if pdf.startswith("http") else f"{website.rstrip('/')}/assets/{pdf}"
-            title_piece = rf"\href{{{url}}}{{{title_piece}}}"
-        chunks = [f"{title_piece}."]
-        if year:
-            chunks.append(f"{year}.")
-        parts.append(r"\item " + " ".join(chunks))
-    parts.append(r"\end{itemize}")
-    return "\n".join(parts)
+# def expository_writing_section(entries: list[dict], website: str = "") -> str:
+#     parts = [r"\begin{itemize}[leftmargin=1.2em,itemsep=0.5ex,topsep=0.2ex]"]
+#     sorted_entries = sorted(entries, key=lambda p: str(p.get("year", "")), reverse=True)
+#     for p in sorted_entries:
+#         title = preserve_math_escape(p["title"])
+#         year = str(p.get("year", ""))
+#         title_piece = rf"\textit{{{title}}}"
+#         if p.get("pdf"):
+#             pdf = p["pdf"]
+#             url = (
+#                 pdf if pdf.startswith("http") else f"{website.rstrip('/')}/assets/{pdf}"
+#             )
+#             title_piece = rf"\href{{{url}}}{{{title_piece}}}"
+#         chunks = [f"{title_piece}."]
+#         if year:
+#             chunks.append(f"{year}.")
+#         parts.append(r"\item " + " ".join(chunks))
+#     parts.append(r"\end{itemize}")
+#     return "\n".join(parts)
 
 
 def awards_section(entries: list[dict]) -> str:
@@ -444,9 +420,7 @@ def _format_term_ranges(term_years: list[tuple[int, str]]) -> str:
     """
     if not term_years:
         return ""
-    indexed = sorted(
-        {(_semester_index(y, t), t, y) for (y, t) in term_years}
-    )
+    indexed = sorted({(_semester_index(y, t), t, y) for (y, t) in term_years})
     runs: list[tuple[tuple[int, str, int], tuple[int, str, int]]] = []
     start = prev = indexed[0]
     for cur in indexed[1:]:
@@ -476,9 +450,7 @@ def _merge_teaching_group(entries: list[dict]) -> dict:
     }
 
     term_years = [
-        (int(e["year"]), e["term"])
-        for e in entries
-        if e.get("term") and e.get("year")
+        (int(e["year"]), e["term"]) for e in entries if e.get("term") and e.get("year")
     ]
     weeks = [
         (int(e["year"]), int(e["week"]))
@@ -603,13 +575,13 @@ def render() -> str:
         pieces.append(section("Education", education_section(edu)))
     if papers := load("papers"):
         pieces.append(section("Papers and preprints", papers_section(papers)))
-    if expo := load("expository-writing"):
-        pieces.append(
-            section(
-                "Expository writing",
-                expository_writing_section(expo, cv.get("website", "")),
-            )
-        )
+    # if expo := load("expository-writing"):
+    #     pieces.append(
+    #         section(
+    #             "Expository writing",
+    #             expository_writing_section(expo, cv.get("website", "")),
+    #         )
+    #     )
     if awards := load("awards"):
         pieces.append(section("Fellowships and awards", awards_section(awards)))
     if exp := load("research-experience"):
@@ -682,9 +654,7 @@ def compile_pdf(tex_path: Path) -> None:
         subprocess.run([tectonic, tex_name], cwd=work_dir, check=True)
         return
 
-    sys.exit(
-        "error: need one of latexmk, pdflatex, or tectonic on PATH to --compile"
-    )
+    sys.exit("error: need one of latexmk, pdflatex, or tectonic on PATH to --compile")
 
 
 def main() -> None:
