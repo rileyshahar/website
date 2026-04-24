@@ -217,16 +217,85 @@ def _row_list(title: str, rows: list[tuple[str, str]]) -> str:
     return f"== {title}\n\n#multi-line-list(\n{body},\n)\n\n"
 
 
-def _join_coauthors(coauthors: list) -> str:
-    names = [initialize(coauthor_name(c)) for c in coauthors]
-    names = [md(n) for n in names if n]
-    if not names:
+def _role_block(
+    italic: str,
+    rows: list[tuple[str, str]],
+    *,
+    italic_right: str = "",
+    sub_spacing: str = "0.5em",
+    indent: int = 6,
+) -> list[str]:
+    """Italic header (with optional right-aligned text) plus a list of cv-row2col rows.
+
+    Returns indented lines forming a single content block (``[ ... ],``)
+    suitable for placement inside a ``#stack(...)``.
+    """
+    pad = " " * indent
+    inner = " " * (indent + 2)
+    inner2 = " " * (indent + 4)
+
+    if italic_right:
+        header = (
+            f'{inner}#cv-row2col([#text(style: "italic")[{italic}]], [{italic_right}])'
+        )
+    else:
+        header = f'{inner}#text(style: "italic")[{italic}]'
+
+    lines = [f"{pad}[", header]
+    if rows:
+        lines.append(f"{inner}#v(0.1em)")
+        lines.append(f"{inner}#multi-line-list(list-args: (spacing: {sub_spacing}),")
+        for left, right in rows:
+            lines.append(f"{inner2}cv-row2col([{left}], [{right}]),")
+        lines.append(f"{inner})")
+    lines.append(f"{pad}],")
+    return lines
+
+
+def _bold_block(
+    heading: str,
+    role_blocks: list[list[str]],
+    *,
+    indent: int = 2,
+    stack_spacing: str = "0.45em",
+) -> str:
+    """List-item content block with a heading and a ``#stack`` of role blocks.
+
+    ``heading`` is rendered as-is, so callers should wrap whatever portion
+    needs to be bold in ``#text(weight: "bold")[...]``.
+    """
+    pad = " " * indent
+    inner = " " * (indent + 2)
+
+    lines = [
+        f"{pad}[",
+        f"{inner}{heading}",
+        f"{inner}#v(0.1em)",
+        f"{inner}#stack(spacing: {stack_spacing},",
+    ]
+    for block_lines in role_blocks:
+        lines.extend(block_lines)
+    lines.append(f"{inner})")
+    lines.append(f"{pad}]")
+    return "\n".join(lines)
+
+
+def _oxford_join(items: list[str]) -> str:
+    """Join with commas and an Oxford-comma ``and`` before the last item."""
+    items = [s for s in items if s]
+    if not items:
         return ""
-    if len(names) == 1:
-        return f"Joint with {names[0]}."
-    if len(names) == 2:
-        return f"Joint with {names[0]} and {names[1]}."
-    return f"Joint with {', '.join(names[:-1])}, and {names[-1]}."
+    if len(items) == 1:
+        return items[0]
+    if len(items) == 2:
+        return f"{items[0]} and {items[1]}"
+    return f"{', '.join(items[:-1])}, and {items[-1]}"
+
+
+def _join_coauthors(coauthors: list) -> str:
+    names = [md(initialize(coauthor_name(c))) for c in coauthors]
+    joined = _oxford_join(names)
+    return f"Joint with {joined}." if joined else ""
 
 
 # ----------------------------------------------------------------- sections
@@ -300,7 +369,7 @@ def education_section(entries: list[dict]) -> str:
             items.append(f"_{md(honor)}_")
         advisors = e.get("advisors") or ([e["advisor"]] if e.get("advisor") else [])
         if advisors:
-            names = ", ".join(md(a) for a in advisors)
+            names = _oxford_join([md(a) for a in advisors])
             label = "Advisor" if len(advisors) == 1 else "Advisors"
             items.append(f"{label}: {names}")
         if notes := e.get("notes"):
@@ -379,7 +448,7 @@ def experience_section(entries: list[dict]) -> str:
         date = md(e.get("date", ""))
         items: list[str] = []
         if e.get("advisors"):
-            adv = ", ".join(md(a) for a in e["advisors"])
+            adv = _oxford_join([md(a) for a in e["advisors"]])
             label = "Advisor" if len(e["advisors"]) == 1 else "Advisors"
             items.append(f"{label}: {adv}")
         if e.get("description"):
@@ -546,7 +615,7 @@ def _teaching_row_left(entry: dict) -> str:
     if code:
         left = f"{code}: {left}"
     if entry["coteachers"]:
-        co = ", ".join(md(coauthor_name(c)) for c in entry["coteachers"])
+        co = _oxford_join([md(coauthor_name(c)) for c in entry["coteachers"]])
         left += f", with {co}"
     return left
 
@@ -569,7 +638,6 @@ def teaching_section(entries: list[dict]) -> str:
     blocks: list[str] = []
     for inst in ordered:
         inst_entries = groups[inst]
-        label = md(inst)
         inst_roles = _collect_teaching_roles(inst_entries)
 
         role_groups: dict[str, list[dict]] = {}
@@ -578,32 +646,16 @@ def teaching_section(entries: list[dict]) -> str:
             if role:
                 role_groups.setdefault(role, []).append(e)
 
-        lines = [
-            "  [",
-            f'    #text(weight: "bold")[{label}]',
-            "    #v(0.1em)",
-            "    #stack(spacing: 0.45em,",
-        ]
-
+        role_blocks: list[list[str]] = []
         for role in inst_roles:
             role_entries = role_groups.get(role, [])
             if not role_entries:
                 continue
             merged_entries = _merge_teaching_entries(role_entries)
-            lines.append("      [")
-            lines.append(f'        #text(style: "italic")[{md(role)}]')
-            lines.append("        #v(0.1em)")
-            lines.append("        #multi-line-list(list-args: (spacing: 0.5em),")
-            for m in merged_entries:
-                lines.append(
-                    f"          cv-row2col([{_teaching_row_left(m)}], [{md(m['when'])}]),"
-                )
-            lines.append("        )")
-            lines.append("      ],")
+            rows = [(_teaching_row_left(m), md(m["when"])) for m in merged_entries]
+            role_blocks.append(_role_block(md(role), rows))
 
-        lines.append("    )")
-        lines.append("  ]")
-        blocks.append("\n".join(lines))
+        blocks.append(_bold_block(f'#text(weight: "bold")[{md(inst)}]', role_blocks))
 
     body = ",\n".join(blocks)
     return f"== Teaching Experience\n\n#list(spacing: 0.8em,\n{body},\n)\n\n"
@@ -628,21 +680,47 @@ def talks_section(research: list[dict], expository: list[dict]) -> str:
 
 
 def service_section(entries: list[dict]) -> str:
-    rows: list[tuple[str, str]] = []
+    blocks: list[str] = []
     for s in entries:
-        role = md(s["role"])
         venue = md(s["venue"])
         if s.get("url"):
             venue = f'#link("{code_str(s["url"])}")[{venue}]'
-        date = md(s.get("date", ""))
-        label = f"*{role}*, {venue}"
+        heading = f'#text(weight: "bold")[{venue}]'
         if s.get("institution"):
-            label += f", {md(s['institution'])}"
+            heading += f", {md(s['institution'])}"
+
+        role = md(str(s["role"]))
         if s.get("coorganizers"):
-            co = ", ".join(md(coauthor_name(c)) for c in s["coorganizers"])
-            label += f", with {co}"
-        rows.append((label, date))
-    return _row_list("Service and organization", rows)
+            co = _oxford_join([md(coauthor_name(c)) for c in s["coorganizers"]])
+            role += f" with {co}"
+
+        date = md(s.get("date", ""))
+
+        footnote = ""
+        if s.get("footnote"):
+            footnote = f"#footnote[{md(str(s['footnote']).strip())}]"
+
+        rows: list[tuple[str, str]] = []
+        instances = s.get("instances") or []
+        for i, inst in enumerate(instances):
+            name = md(inst["name"])
+            inst_venue = md(inst.get("venue", ""))
+            inst_date = md(inst.get("date", ""))
+            left = name
+            if inst_venue:
+                left += f", at {inst_venue}"
+            if footnote and i == 0:
+                left += footnote
+            rows.append((left, inst_date))
+
+        if footnote and not instances:
+            role += footnote
+
+        role_block = _role_block(role, rows, italic_right=date)
+        blocks.append(_bold_block(heading, [role_block]))
+
+    body = ",\n".join(blocks)
+    return f"== Service and organization\n\n#list(spacing: 0.8em,\n{body},\n)\n\n"
 
 
 # -------------------------------------------------------------------- build

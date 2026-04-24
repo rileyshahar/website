@@ -1,10 +1,23 @@
 - role: Co-organizer
   venue:
-    "AMTRaK (Atlantic Meeting on Topology, Representation theory, and K-theory)"
+    "Atlantic Meeting on Topology, Representation theory, and K-theory (AMTRaK)"
   url: https://rileyshahar.com/amtrak
   coorganizers:
     - Nooria Ahmed
   date: "2025–"
+  instances:
+    - name: "AMTRaK V: Scissors Congruence K-Theory"
+      venue: the University of Pennsylvania
+      date: April 2026
+
+- role: Mentor
+  venue: Directed Reading Program
+  url: https://web.sas.upenn.edu/math-drp/
+  institution: University of Pennsylvania
+  date: "2026–"
+  instances:
+    - name: "Michael Carfley, *Linear Algebra*"
+      date: Spring 2026
 
 - role: Co-organizer
   venue: Graduate Pizza Seminar
@@ -17,14 +30,19 @@
 - role: Co-organizer
   venue: Mathematics Student Colloquium
   institution: Reed College
+  coorganizers:
+    - Asa Ferguson
   date: "2023–24"
 
-- role: Founder and co-organizer
-  venue: Computer Science Peer Mentorship Program
-  institution: Reed College
-  date: "2022–24"
-
-- role: Organizer
+- role: Liason
   venue: "SL(m): Student Liaisons in Mathematics"
   institution: Reed College
   date: "2023–24"
+
+- role: Co-founder and co-organizer
+  venue: Computer Science Peer Mentorship Program
+  institution: Reed College
+  date: "2022–24"
+  coorganizers:
+    - Daniela Arroyo-Perez
+    - Aria Killebrew Bruehl
