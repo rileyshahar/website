@@ -1,5 +1,6 @@
 - title: Math in the Courtroom
-  inst: SCI Chester
+  role: Instructor
+  inst: State Correctional Institution Chester
   coteachers:
     - name: Athina Avrantini
       url: https://www.math.upenn.edu/people/athina-avrantini
@@ -12,14 +13,23 @@
   term: Spring
   year: 2026
 
+# - title: Mathematics of Change, Part I
+#   role: Instructor
+#   code: MATH 1070
+#   inst: University of Pennsylvania
+#   term: Fall
+#   year: 2026
+
 - title: Mathematics of Change, Part I
+  role: Teaching Assistant
   code: MATH 1070
   inst: University of Pennsylvania
   term: Fall
   year: 2025
 
 - title: Extra Stretchy Rubber-Sheet Geometry
-  inst: Mathcamp
+  role: Instructor
+  inst: Canada/USA Mathcamp
   year: 2025
   week: 1
   files: extra-stretchy-rubber-sheet-geometry
@@ -28,7 +38,8 @@
     underlying point-set topology.
 
 - title: Category Theory from Scratch
-  inst: Mathcamp
+  role: Instructor
+  inst: Canada/USA Mathcamp
   coteachers:
     - Della Hendrickson
   year: 2025
@@ -42,7 +53,8 @@
     encapsulating these families.
 
 - title: "Oops All Algebra: An Introduction to Infinity-Categories"
-  inst: Mathcamp
+  role: Instructor
+  inst: Canada/USA Mathcamp
   year: 2025
   week: 3
   files: oops-all-algebra
@@ -54,7 +66,8 @@
     proof that infinity-groupoids are Kan complexes.
 
 - title: A Tour of Paradox
-  inst: Mathcamp
+  role: Instructor
+  inst: Canada/USA Mathcamp
   year: 2025
   week: 4
   description: >
@@ -67,7 +80,8 @@
     self-reference like the liar's and Russell's paradoxes.
 
 - title: A Cute Combinatorics Problem
-  inst: Mathcamp
+  role: Instructor
+  inst: Canada/USA Mathcamp
   year: 2025
   week: 5
   files: cute-combinatorics-problem
@@ -76,85 +90,105 @@
     submonoids.
 
 - title: Computer Science Fundamentals I
+  role: Teaching Assistant
   code: CSCI 121
   inst: Reed College
   term: Spring
   year: 2024
+
 - title: Computer Science Fundamentals I
+  role: Teaching Assistant
   code: CSCI 121
   inst: Reed College
   term: Fall
   year: 2023
+
 - title: Computer Science Fundamentals I
+  role: Teaching Assistant
   code: CSCI 121
   inst: Reed College
   term: Spring
   year: 2023
+
 - title: Computer Science Fundamentals I
+  role: Teaching Assistant
   code: CSCI 121
   inst: Reed College
   term: Fall
   year: 2022
+
 - title: Computer Science Fundamentals I
+  role: Teaching Assistant
   code: CSCI 121
   inst: Reed College
   term: Spring
   year: 2022
+
 - title: Computer Science Fundamentals I
+  role: Teaching Assistant
   code: CSCI 121
   inst: Reed College
   term: Fall
   year: 2021
 
 - title: Calculus
+  role: Teaching Assistant
   code: Math 111
   inst: Reed College
   term: Spring
   year: 2024
 
 - title: Computability and Complexity
+  role: Teaching Assistant
   code: CSCI 387
   inst: Reed College
   term: Spring
   year: 2024
 
 - title: Computability and Complexity
+  role: Teaching Assistant
   code: CSCI 387
   inst: Reed College
   term: Fall
   year: 2022
 
 - title: Linear Algebra
+  role: Teaching Assistant
   code: Math 201
   inst: Reed College
   term: Fall
   year: 2023
 
 - title: Programming Language Design and Implementation
+  role: Teaching Assistant
   code: CSCI 384
   inst: Reed College
   term: Fall
   year: 2023
 
 - title: Abstract Algebra
+  role: Teaching Assistant
   code: Math 332
   inst: Reed College
   term: Spring
   year: 2023
 
 - title: Operating Systems
+  role: Teaching Assistant
   code: CSCI 393
   inst: Reed College
   term: Spring
   year: 2023
 
 - title: Intermediate Computer Science Fundamentals I
+  role: Teaching Assistant
   code: CSCI 122
   inst: Reed College
   term: Fall
   year: 2022
 
 - title: Computer Science Fundamentals II
+  role: Teaching Assistant
   code: CSCI 221
   inst: Reed College
   term: Spring

@@ -27,7 +27,7 @@ In Spring 2026, I cotaught a pilot workshop with three other Penn graduate
 students at State Correctional Institution Chester.
 
 <ul>
-{%- assign chester = site.data.teaching | where: "inst", "SCI Chester" -%}
+{%- assign chester = site.data.teaching | where: "inst", "State Correctional Institution Chester" -%}
 {%- assign years = chester | map: "year" | uniq | sort | reverse -%}
 {%- assign term_order = "Fall,Spring" | split: "," -%}
 
@@ -50,7 +50,7 @@ to talk with anyone about the pedagogical choices behind any of these classes,
 as well as to share content and discuss things I would change :).
 
 <ul>
-{%- assign mathcamp = site.data.teaching | where: "inst", "Mathcamp" -%}
+{%- assign mathcamp = site.data.teaching | where: "inst", "Canada/USA Mathcamp" -%}
 {%- assign years = mathcamp | map: "year" | uniq | sort | reverse -%}
 {%- assign weeks = "1,2,3,4,5" | split: "," -%}
 

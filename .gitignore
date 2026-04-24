@@ -5,6 +5,6 @@ _site
 vendor
 Gemfile.lock
 cv/*
-assets/cv.tex
+assets/cv.typ
 assets/cv.pdf
 .claude

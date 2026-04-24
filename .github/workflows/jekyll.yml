@@ -43,20 +43,8 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Cache tectonic bundle
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/Tectonic
-          key: tectonic-${{ runner.os }}-v1
-
-      - name: Install tectonic
-        run: |
-          TECTONIC_VERSION=0.15.0
-          curl -fsSL -o tectonic.tar.gz \
-            "https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%40${TECTONIC_VERSION}/tectonic-${TECTONIC_VERSION}-x86_64-unknown-linux-musl.tar.gz"
-          tar -xzf tectonic.tar.gz tectonic
-          sudo install -m 0755 tectonic /usr/local/bin/tectonic
-          rm -f tectonic.tar.gz tectonic
+      - name: Install Typst
+        uses: typst-community/setup-typst@v5
 
       - name: Build CV
         run: python scripts/build_cv.py --compile

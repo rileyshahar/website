@@ -7,20 +7,14 @@
   advisor: Mona Merling
   honors:
     - National Science Foundation Graduate Research Fellow
-  qualifying_exam:
-    topic: parameterized higher category theory
-    examiners:
-      - Mona Merling
-      - Nir Gadish
 
 - institution: Reed College
   location: Portland, OR
   degree: B.A. in Mathematics and Computer Science
   start: 2020
   end: 2024
-  thesis: "Categories for Cryptographic Composability"
-  advisors:
-    - Angélica Osorno
-    - Adam Groce
   honors:
     - Phi Beta Kappa
+  notes:
+    - "Thesis: *Categories for Cryptographic Composability*, advised by Angélica
+      Osorno and Adam Groce"
