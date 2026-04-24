@@ -606,7 +606,7 @@ def teaching_section(entries: list[dict]) -> str:
         blocks.append("\n".join(lines))
 
     body = ",\n".join(blocks)
-    return f"== Teaching\n\n#list(spacing: 0.8em,\n{body},\n)\n\n"
+    return f"== Teaching Experience\n\n#list(spacing: 0.8em,\n{body},\n)\n\n"
 
 
 def talks_section(research: list[dict], expository: list[dict]) -> str:
