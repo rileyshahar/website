@@ -1,5 +1,18 @@
 - title: "Slices in Equivariant Topology: A Short Introduction"
-  year: 2025
+  date: 2025
   abstract:
     We introduce, with many examples, the slice theorem for (nice) $$G$$-spaces.
   pdf: slices-in-equivariant-topology.pdf
+
+- title: "Categories for Cryptographic Composability"
+  date: 2024
+  abstract:
+    We present introductory material on cryptography and category theory,
+    focused on the prerequisites to cryptographic composability. We then present
+    the approach to cryptographic composability of Broadbent & Karvonen. We give
+    several novel contributions, including a new model for cryptographic
+    protocols which use both single- and multi-use resources, and a
+    2-categorical generalization of their model which incorporates data about
+    computational reductions.
+  pdf: undergraduate-thesis.pdf
+  venue: Undergraduate Thesis

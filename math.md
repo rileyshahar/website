@@ -87,7 +87,7 @@ soon!
       {%- assign list=p.coauthors -%}
       {%- include comma-sep.html list=list -%}
     {%- endif -%}
-    {%- if p.arxiv %} — <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a>{% endif -%}
+    {%- if p.arxiv %}—<a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a>{% endif -%}
     {%- if p.status %} ({{ p.status }}){% endif -%}
     {% endcapture %}
 
@@ -103,7 +103,7 @@ soon!
 <ul>
 {%- assign expos = site.data.expository-writing | sort: "date" | reverse -%}
 {%- for p in expos -%}
-  {%- assign uid = "desc-" | append: p.title | append: "-" | append: p.year | slugify -%}
+  {%- assign uid = "desc-" | append: p.title | append: "-" | append: p.date | slugify -%}
   <li>
     {% capture label %}
     {% if p.pdf %}<a href="assets/{{ p.pdf }}">{% endif %}
@@ -111,11 +111,15 @@ soon!
     {% if p.pdf %}</a>{% endif %}
     {%- if p.coauthors and p.coauthors.size > 0 -%}
       , with {{ " " }}
-      {%- assign list=p.coauthors -%}
+    {%- assign list=p.coauthors -%}
       {%- include comma-sep.html list=list -%}
     {%- endif -%}
-    {%- if p.notes %} — {{ p.notes }} {% endif -%}  
-    &nbsp;({{ p.year }})
+    {%- if p.notes %} — {{ p.notes }} {% endif -%}
+    &nbsp;(
+    {%- if p.venue -%}
+      {{ p.venue }},&nbsp;
+    {%- endif -%}
+    {{ p.date }})
     {% endcapture %}
 
     {%- assign sr = "Toggle abstract for " | append: p.title -%}
@@ -131,7 +135,8 @@ soon!
 {%- assign talks = site.data.research-talks | concat: site.data.expository-talks
   |sort: "date" | reverse -%}
 {%- for t in talks -%}
-  {%- assign uid = "desc-" | append: t.title | append: "-" | append: t.year | slugify -%}
+  {%- assign year = p.date | date: "%Y" -%}
+  {%- assign uid = "desc-" | append: t.title | append: "-" | append: year | slugify -%}
   <li>
     {% capture label %}
     <em>{{ t.title }}</em>
