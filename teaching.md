@@ -12,7 +12,7 @@ I TA at Penn some semesters of the academic year.
 <ul>
 {%- assign upenn = site.data.teaching_merged["University of Pennsylvania"] -%}
 {%- for c in upenn -%}
-<li> {{ c.when }} — {{ c.code }}: <em>{{ c.title }}</em> </li>
+<li> {{ c.when }}—{{ c.code }}: <em>{{ c.title }}</em> </li>
 {%- endfor -%}
 </ul>
 
@@ -24,7 +24,7 @@ students at State Correctional Institution Chester.
 <ul>
 {%- assign chester = site.data.teaching_merged["State Correctional Institution Chester"] -%}
 {%- for c in chester -%}
-<li> {{ c.when }} — <em>{{ c.title }}</em>
+<li> {{ c.when }}—<em>{{ c.title }}</em>
 {%- if c.coteachers and c.coteachers.size > 0 -%} , with {{ " " }}
 {%- include comma-sep.html list=c.coteachers -%} {%- endif -%} </li>
 {%- endfor -%}
@@ -46,7 +46,7 @@ as well as to share content and discuss things I would change :).
 
 <li>
     {% capture label %}
-    {{ c.when }} — <em>{{ c.title }}</em>
+    {{ c.when }}—<em>{{ c.title }}</em>
 {%- if c.coteachers and c.coteachers.size > 0 -%} , with {{ " " }}
 {%- include comma-sep.html list=c.coteachers -%} {%- endif -%} {% endcapture %}
 {%- assign sr = "Toggle description for " | append: c.title -%}
@@ -64,6 +64,6 @@ intermediary between the students and professor.
 <ul>
 {%- assign reed = site.data.teaching_merged["Reed College"] -%}
 {%- for c in reed -%}
-<li> {{ c.when }} — {{ c.code }}: <em>{{ c.title }}</em> </li>
+<li> {{ c.when }}—{{ c.code }}: <em>{{ c.title }}</em> </li>
 {%- endfor -%}
 </ul>
