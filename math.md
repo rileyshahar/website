@@ -5,8 +5,7 @@ title: Math
 
 ## Current Projects
 
-Some things I am currently thinking about (click to read more---I don't claim
-that any of these ideas are either good or original):
+Some things I am currently thinking about (click to read more):
 
 <ul>
   <li>
@@ -71,9 +70,6 @@ I would love to talk about these things or anything
 else---[send me an email](mailto:rshahar@sas.upenn.edu)!
 
 ## Papers
-
-I'm young and there is not much here yet... but hopefully there will be more
-soon!
 
 <ul>
 {%- assign papers = site.data.papers | sort: "date" | reverse -%}
