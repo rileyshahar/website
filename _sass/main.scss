@@ -62,16 +62,16 @@ main {
       radial-gradient(at 100% 15%, #f8c3b1 0px, transparent 50%);
   }
 
-  &[data-palette="cotton-candy"] {
+  &[data-palette="sunset"] {
     --footer-ink: #44403a;
     --footer-rule: rgba(0, 0, 0, 0.18);
-    background-color: #fdeef2;
+    background-color: #ffe3c0;
     background-image:
-      radial-gradient(at 12% 25%, #cdd6f4 0px, transparent 55%),
-      radial-gradient(at 40% 80%, #ffc6d9 0px, transparent 50%),
-      radial-gradient(at 62% 30%, #f6e7c1 0px, transparent 55%),
-      radial-gradient(at 88% 75%, #ffd6b0 0px, transparent 55%),
-      radial-gradient(at 100% 15%, #e3c9f0 0px, transparent 50%);
+      radial-gradient(at 12% 25%, #cdaad8 0px, transparent 55%),
+      radial-gradient(at 40% 80%, #f3a0c0 0px, transparent 50%),
+      radial-gradient(at 62% 30%, #ffe3b5 0px, transparent 55%),
+      radial-gradient(at 88% 75%, #ff9c84 0px, transparent 55%),
+      radial-gradient(at 100% 15%, #ffbf94 0px, transparent 50%);
   }
 
   &[data-palette="aurora"] {
