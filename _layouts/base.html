@@ -99,17 +99,27 @@
       </div>
     </main>
 
-    <footer>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          Built with <a href="https://jekyllrb.com/">Jekyll</a> and
-          (server-side) <a href="https://katex.org/">KaTeX</a> &middot; {%
-          unless site.repo == null %}
-          <a href="{{ site.repo }}/commits/main"
-            >Last updated {{ site.time | date:"%b %-d, %Y" }}</a
-          >
-          {%endunless%}
-        </div>
+    <footer
+      class="site-footer"
+      data-palette="{{ page.footer_palette | default: 'meadow' }}"
+    >
+      <div class="links">
+        Some links I like:
+        {% for link in site.data.links -%}
+          {%- unless forloop.first %} <span class="sep">|</span> {% endunless -%}
+          {%- capture name -%}{{ link.name | markdownify }}{%- endcapture -%}
+          {%- assign name = name | replace: "<p>", "" | replace: "</p>", "" | strip -%}
+          <a href="{{ link.url }}">{{ name }}</a>
+        {%- endfor %}
+      </div>
+      <div class="colophon">
+        Built with <a href="https://jekyllrb.com/">Jekyll</a> and
+        (server-side) <a href="https://katex.org/">KaTeX</a> &middot; {%
+        unless site.repo == null %}
+        <a href="{{ site.repo }}/commits/main"
+          >Last updated {{ site.time | date:"%b %-d, %Y" }}</a
+        >
+        {%endunless%}
       </div>
     </footer>
   </body>

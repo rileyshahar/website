@@ -2,7 +2,6 @@
 
 $accent: #7957d5;
 $background-color: #faf7f2;
-$footer-text-color: #666666;
 
 html {
   height: 100%;
@@ -43,20 +42,82 @@ main {
   padding-top: 1rem;
 }
 
-footer {
+.site-footer {
   width: 100%;
-  color: $footer-text-color;
-  opacity: 0.5;
-  font-size: 70%;
+  margin-top: 1.5rem;
+  padding: 1.5rem clamp(1rem, 4vw, 3rem);
+  font-size: 1rem;
+  line-height: 1.6;
 
-  .row {
-    padding-bottom: 20px;
+  // the default
+  &[data-palette="meadow"] {
+    --footer-ink: #44403a;
+    --footer-rule: rgba(0, 0, 0, 0.18);
+    background-color: #f4eecb;
+    background-image:
+      radial-gradient(at 12% 25%, #a6e6c8 0px, transparent 55%),
+      radial-gradient(at 40% 80%, #b6ead2 0px, transparent 50%),
+      radial-gradient(at 62% 30%, #f7f2d8 0px, transparent 55%),
+      radial-gradient(at 88% 75%, #f4a78c 0px, transparent 55%),
+      radial-gradient(at 100% 15%, #f8c3b1 0px, transparent 50%);
   }
 
-  a {
-    // @include transition(0.5s ease);
-    text-decoration: none;
-    color: inherit;
+  &[data-palette="cotton-candy"] {
+    --footer-ink: #44403a;
+    --footer-rule: rgba(0, 0, 0, 0.18);
+    background-color: #fdeef2;
+    background-image:
+      radial-gradient(at 12% 25%, #cdd6f4 0px, transparent 55%),
+      radial-gradient(at 40% 80%, #ffc6d9 0px, transparent 50%),
+      radial-gradient(at 62% 30%, #f6e7c1 0px, transparent 55%),
+      radial-gradient(at 88% 75%, #ffd6b0 0px, transparent 55%),
+      radial-gradient(at 100% 15%, #e3c9f0 0px, transparent 50%);
+  }
+
+  &[data-palette="aurora"] {
+    --footer-ink: #faf7f2;
+    --footer-rule: rgba(255, 255, 255, 0.22);
+    background-color: #0c1322;
+    background-image:
+      radial-gradient(at 12% 25%, #243a5e 0px, transparent 55%),
+      radial-gradient(at 40% 80%, #2a9d8f 0px, transparent 50%),
+      radial-gradient(at 62% 30%, #56c596 0px, transparent 55%),
+      radial-gradient(at 88% 75%, #6d4f9c 0px, transparent 55%),
+      radial-gradient(at 100% 15%, #1b8f86 0px, transparent 50%);
+  }
+  // ──────────────────────────────────────────────────────────────────────────
+
+  color: var(--footer-ink);
+
+  .links {
+    .sep {
+      opacity: 0.4;
+      margin: 0 0.35rem;
+    }
+
+    a {
+      color: var(--footer-ink);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+      text-decoration-thickness: 1px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .colophon {
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--footer-rule);
+    font-size: 0.8rem;
+    opacity: 0.8;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 }
 

@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Math
+footer_palette: aurora
 ---
 
 ## Current Projects

@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Teaching
+footer_palette: cotton-candy
 ---
 
 I love to teach.
