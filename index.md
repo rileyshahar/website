@@ -22,10 +22,12 @@ You can contact me at [rshahar@sas.upenn.edu](mailto:rshahar@sas.upenn.edu) or
 
 ## About Me
 
-- I co-organize the [graduate pizza seminar](https://pizza-seminar.github.io)
-  and run lots of departmental social activities at Penn. During summers, I
-  teach at [Canada/USA Mathcamp](https://mathcamp.org). With Nooria Ahmed, I
-  organize the [AMTRaK](amtrak) conference.
+- I am a Head TA at Penn, in which capacity I help organize our TA training
+  program, and observe and give feedback to other TAs. I also co-organize the
+  [graduate pizza seminar](https://pizza-seminar.github.io) and run lots of
+  departmental social activities. During summers, I teach at
+  [Canada/USA Mathcamp](https://mathcamp.org). With Nooria Ahmed, I organize the
+  [AMTRaK](amtrak) conference.
 - Before Penn, I was a mathematics-computer science major at Reed College. My
   [undergraduate thesis](assets/undergrad-thesis.pdf), supervised by
   [Angélica Osorno](https://people.reed.edu/~aosorno/) and
