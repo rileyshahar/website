@@ -75,12 +75,12 @@
   year: 2026
   week: 4
   description: >
-    An discussion course on the principle of indifference, as studied in
-    analytic philosophy and Bayesian statistics, and especially the "restricted"
-    principle of indifference formulated by Elga. Readings included Elga's
-    *Defeating Dr. Evil With Self-Locating Belief* and *Self-Locating Belief and
-    the Sleeping Beauty Problem*, Weatherson's *Should We Respond to Evil With
-    Indifference?*, and Marcoci's *Monty Hall Saves Dr. Evil*.
+    A discussion course on the principle of indifference, as studied in Bayesian
+    epistemology, and especially the "restricted" principle of indifference
+    formulated by Elga. Readings included Elga's *Defeating Dr. Evil With
+    Self-Locating Belief* and *Self-Locating Belief and the Sleeping Beauty
+    Problem*, Weatherson's *Should We Respond to Evil With Indifference?*, and
+    Marcoci's *Monty Hall Saves Dr. Evil*.
 
 - title: Truth in Fiction
   role: Instructor
@@ -99,7 +99,7 @@
   year: 2026
   week: 5
   description: >
-    A one-day course introducing Fursternberg's proof of the infinitude of
+    A one-day course introducing Furstenberg's proof of the infinitude of
     primes, and asking whether the extra machinery gives it any different
     mathematical value from Euclid's proof.
 
