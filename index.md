@@ -7,9 +7,9 @@ title_override: Riley Shahar
 <img class="profile round" src="assets/images/profile.png" alt="Photo of Riley
   Shahar">
 
-I'm a second-year PhD student in mathematics at the University of Pennsylvania,
-working with [Mona Merling](https://www2.math.upenn.edu/~mmerling/). My pronouns
-are she or they.
+I'm a PhD student in mathematics at the University of Pennsylvania, working with
+[Mona Merling](https://www2.math.upenn.edu/~mmerling/). My pronouns are she or
+they.
 
 My research interests are in homotopy theory and category theory. I spend a lot
 of time thinking about how we can make math more accessible and friendly, both
